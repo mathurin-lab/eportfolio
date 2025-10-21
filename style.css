@@ -5,7 +5,7 @@ body {
 
 /* Style pour les sections principales */
 section, nav {
-  background-color: white;     /* Un fond blanc pour les cartes */
+  background-color: red;     /* Un fond blanc pour les cartes */
   margin: 20px;                /* De l'espace entre les cartes */
   padding: 25px;               /* De l'espace à l'intérieur des cartes */
   border-radius: 8px;          /* Des jolis coins arrondis */
