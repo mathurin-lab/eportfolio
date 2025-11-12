@@ -10,22 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Le script Lucide est supprimé car nous utilisons des SVG directs -->
 
     <style>
         /* Appliquer la police Inter par défaut */
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0B0F1A; /* Un fond bleu nuit très sombre */
+            /* Ajout d'un motif de fond subtil */
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 20px 20px;
         }
-        /* Style pour un effet de fond subtil */
-        body {
-            background-color: #111827; /* Fond sombre (gray-900) */
-            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
-            background-size: 40px 40px;
-        }
-        /* Pour s'assurer que les sections remplissent au moins l'écran */
+
+        /* Style pour la page active (surlignage) */
         .page-section {
-            min-height: calc(100vh - 12rem); /* (100vh - hauteur du header et du footer) */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Style pour les liens de navigation */
+        .nav-link.active {
+            color: #818cf8; /* Couleur indigo-400 */
         }
     </style>
 </head>
@@ -34,126 +42,113 @@
     <!-- =========== HEADER / NAVBAR =========== -->
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
         <!-- Conteneur élargi pour la barre de navigation -->
-        <!-- CHANGÉ: justify-end -> justify-center pour centrer les liens -->
+        <!-- CHANGÉ: justify-center -> justify-evenly pour espacer les liens -->
         <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
-            <!-- Nom / Logo (Supprimé) -->
             
             <!-- Liens de navigation (Desktop) -->
-            <ul class="hidden md:flex space-x-5"> <!-- Espacement réduit -->
+            <!-- CHANGÉ: Ajout de w-full et justify-evenly pour étirer les liens -->
+            <ul class="hidden md:flex w-full justify-evenly">
                 <!-- Le lien "Home" pointe vers #accueil -->
-                <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
+                <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> <!-- Par défaut 'active' -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M20.4 14.5c-.2-1.3-.5-2.5-.9-3.7l-1.8-5.3c-.2-.7-.9-1-1.6-.9-.6.1-1.1.6-1 1.2l1.3 4.2-4.1 2.2c-1.8-.5-3.6-.9-5.4-1.2l-1.9-.3c-.6-.1-1.2.3-1.3.9-.1.6.3 1.2.9 1.3l1.9.3c1.9.3 3.9.7 5.8 1.3l4 2.1c.4.2.8.3 1.2.5.8.3 1.7.5 2.5.6.2 0 .5 0 .7-.1.6-.1 1.1-.6 1-1.2zM21 18c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v2zM6.5 17.5c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-2c0-.3-.1-.5-.3-.7-.2-.2-.4-.3-.7-.3h-2zM12 11.1c-.2-.3-.4-.5-.7-.7-.2-.2-.5-.3-.7-.3h-2c-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-.2l-1-2.1z"/></svg>
+                    <!-- CHANGÉ: Icône de ballon de basket -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9C7.4 2.4 10.6 1 14.1 1.1"/><path d="M19.1 19.1C16.6 21.6 13.4 23 9.9 22.9"/><path d="M9.9 1.1C13.4 1 16.6 2.4 19.1 4.9"/><path d="M4.9 19.1C7.4 21.6 10.6 23 14.1 22.9"/><path d="M12 1a11 11 0 0 0 0 22"/><path d="M1 12a11 11 0 0 1 22 0"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
-                <!-- Onglet Contact Supprimé -->
             </ul>
 
             <!-- Bouton Menu Mobile -->
             <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
-                <!-- CHANGÉ: Icône SVG directe -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </nav>
         
         <!-- Menu Mobile (caché par défaut) -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
-            <ul class="flex flex-col items-center py-4 space-y-5"> <!-- Espace vertical légèrement augmenté -->
-                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
+            <ul class="flex flex-col items-center py-4 space-y-5">
+                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> <!-- Par défaut 'active' -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20.4 14.5c-.2-1.3-.5-2.5-.9-3.7l-1.8-5.3c-.2-.7-.9-1-1.6-.9-.6.1-1.1.6-1 1.2l1.3 4.2-4.1 2.2c-1.8-.5-3.6-.9-5.4-1.2l-1.9-.3c-.6-.1-1.2.3-1.3.9-.1.6.3 1.2.9 1.3l1.9.3c1.9.3 3.9.7 5.8 1.3l4 2.1c.4.2.8.3 1.2.5.8.3 1.7.5 2.5.6.2 0 .5 0 .7-.1.6-.1 1.1-.6 1-1.2zM21 18c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v2zM6.5 17.5c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-2c0-.3-.1-.5-.3-.7-.2-.2-.4-.3-.7-.3h-2zM12 11.1c-.2-.3-.4-.5-.7-.7-.2-.2-.5-.3-.7-.3h-2c-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-.2l-1-2.1z"/></svg>
+                    <!-- CHANGÉ: Icône de ballon de basket -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9C7.4 2.4 10.6 1 14.1 1.1"/><path d="M19.1 19.1C16.6 21.6 13.4 23 9.9 22.9"/><path d="M9.9 1.1C13.4 1 16.6 2.4 19.1 4.9"/><path d="M4.9 19.1C7.4 21.6 10.6 23 14.1 22.9"/><path d="M12 1a11 11 0 0 0 0 22"/><path d="M1 12a11 11 0 0 1 22 0"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône SVG directe -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
-                <!-- Onglet Contact Supprimé -->
             </ul>
         </div>
     </header>
 
     <!-- =========== CONTENU PRINCIPAL =========== -->
-    <main class="w-full"> <!-- Changé: Suppression de 'container mx-auto px-6 py-12' -->
+    <main class="w-full"> 
 
         <!-- --- Section Accueil (Visible par défaut) --- -->
-        <!-- La section prend toute la largeur, le contenu à l'intérieur est centré et élargi -->
         <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
             <!-- Contenu de la page d'accueil (élargi) -->
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <!-- Colonne 1: Image -->
-                <div class="md:col-span-1">
-                    <img src="https://placehold.co/500x500/374151/9ca3af?text=Mathurin+Viot" 
-                         alt="Portrait de Mathurin Viot" 
-                         class="rounded-lg shadow-2xl w-full max-w-md mx-auto h-auto transform transition-all duration-500 hover:scale-105">
+                <div class="md:col-span-1 flex justify-center items-center">
+                    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-500/30">
+                        <img src="https://placehold.co/400x400/374151/E0E7FF?text=Mathurin+Viot" 
+                             alt="Photo de Mathurin Viot" 
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
-
+                
                 <!-- Colonne 2: Texte de présentation -->
                 <div class="md:col-span-1">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                         Mathurin's e-portfolio
                     </h1>
-                    <h2 class="text-2xl font-semibold text-indigo-300 mb-6">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">
                         Welcome on my e-portfolio!
                     </h2>
-                    <div class="text-lg text-gray-300 space-y-4">
+                    <div class="space-y-4 text-lg text-gray-300">
                         <p>
                             I am Mathurin VIOT, a student engineer at ENSEEIHT. I am currently in my second year at ENSEEIHT (equivalent to a Master’s 1) within the Energy, Electronics and Automation department, specializing in Energy/Mechatronics/Automation.
                         </p>
                         <p>
-                            I have a strong interest in robotics: whether in programming or dynamic structure modeling, as well as in industrial process automation (Industry 4.0, cobots).
+                            I have a strong interest in robotics : whether in programming or dynamic structure modeling, as well as in industrial process automation (Industry 4.0, cobots).
                         </p>
                         <p>
                             I am also drawn to the railway sector, particularly for its promising opportunities for innovation.
                         </p>
                     </div>
-                    <!-- Section Contact (Déplacée HORS de la colonne) -->
                 </div>
             </div>
 
@@ -163,20 +158,16 @@
                 <div class="flex flex-wrap gap-4 justify-center">
                     <!-- Remplace '#' par ton email -->
                     <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
-                        <!-- CHANGÉ: Icône SVG directe -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
                     <!-- Remplace '#' par ton lien LinkedIn -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                        <!-- CHANGÉ: Icône SVG directe -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         LinkedIn
                     </a>
-                    <!-- Lien GitHub (Supprimé) -->
                 </div>
             </div>
-            <!-- Fin de la Section Contact -->
         </section>
 
         <!-- --- Section Engineering course (Cachée par défaut) --- -->
@@ -184,7 +175,7 @@
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Engineering Course
             </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6"> <!-- Ajout de px-6 -->
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6"> 
                 <p class="text-lg text-gray-300">
                     (Here, we will integrate the **timeline** of your engineering course, your subjects, and key projects.)
                 </p>
@@ -192,7 +183,6 @@
         </section>
 
         <!-- --- Section International Mobility (Cachée par défaut) --- -->
-        <!-- RESTAURÉE -->
         <section id="mobility" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 International Mobility
@@ -205,7 +195,6 @@
         </section>
 
         <!-- --- Section Sustainability (Cachée par défaut) --- -->
-        <!-- RESTAURÉE -->
         <section id="sustainability" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sustainability & Civic Engagement
@@ -218,7 +207,6 @@
         </section>
 
         <!-- --- Section Sport (Cachée par défaut) --- -->
-        <!-- RESTAURÉE -->
         <section id="sport" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sport & other activities
@@ -231,7 +219,6 @@
         </section>
 
         <!-- --- Section Career (Cachée par défaut) --- -->
-        <!-- RESTAURÉE -->
         <section id="career" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Career Development
@@ -239,7 +226,7 @@
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
                     (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </p>
+                </T>
             </div>
         </section>
 
@@ -247,7 +234,7 @@
 
     <!-- =========== FOOTER =========== -->
     <footer class="bg-gray-900 border-t border-gray-700 mt-20">
-        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500"> <!-- Changé: container -> max-w-7xl px-6 -->
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
             <p class="mt-2">Built with ❤️, HTML, and Tailwind CSS.</p>
         </div>
@@ -255,67 +242,99 @@
 
     <!-- =========== SCRIPTS JS =========== -->
     
-    <!-- Script Lucide (SUPPRIMÉ car nous utilisons des SVG directs) -->
-    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Initialisation des icônes Lucide (SUPPRIMÉE, plus nécessaire)
-            // lucide.createIcons();
-
+            
             // --- Gestion du Menu Mobile ---
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
 
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // --- Gestion de la Navigation Interne ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageSections = document.querySelectorAll('.page-section');
-
-            // Fonction pour afficher une page et cacher les autres
-            function showPage(pageId) {
-                // Cache toutes les sections
+            // --- Gestion de la Navigation (Afficher/Cacher les pages) ---
+            function showPage(targetId) {
+                // Masquer toutes les sections
                 pageSections.forEach(section => {
                     section.classList.add('hidden');
                 });
-                
-                // Affiche la section demandée
-                const targetPage = document.getElementById(pageId);
+
+                // Afficher la section cible
+                const targetPage = document.getElementById(targetId);
                 if (targetPage) {
                     targetPage.classList.remove('hidden');
                 }
             }
 
-            // Ajoute les écouteurs d'événements aux liens de navigation
+            // --- Gestion des clics sur les liens de navigation ---
             navLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault(); // Empêche le comportement de l'ancre
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Empêche le comportement de lien par défaut
                     
-                    // Extrait l'ID de la page (ex: "accueil" depuis "index.html#accueil")
-                    const pageId = link.hash.substring(1); // .hash renvoie "#accueil", .substring(1) enlève le "#"
+                    const targetId = link.getAttribute('href').substring(1); // Obtient l'ID (ex: "accueil")
                     
-                    // Affiche la page correspondante
-                    showPage(pageId);
+                    // Gérer l'affichage de la page
+                    showPage(targetId);
 
-                    // Ferme le menu mobile si on est en vue mobile
+                    // Mettre à jour la classe 'active'
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    link.classList.add('active');
+
+                    // Pour le menu mobile, on cherche le lien parent et on l'active aussi
+                    if (link.closest('#mobile-menu')) {
+                        const desktopLink = document.querySelector(`header ul a[href="${link.getAttribute('href')}"]`);
+                        if(desktopLink) desktopLink.classList.add('active');
+                    } else {
+                        const mobileLink = document.querySelector(`#mobile-menu a[href="${link.getAttribute('href')}"]`);
+                        if(mobileLink) mobileLink.classList.add('active');
+                    }
+
+
+                    // Fermer le menu mobile après le clic
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
+
+                    // Optionnel: change l'URL dans la barre sans recharger
+                    history.pushState(null, null, `#${targetId}`);
                 });
             });
 
-            // Gérer le cas où l'utilisateur arrive avec un hash dans l'URL
-            if (window.location.hash) {
-                const pageId = window.location.hash.substring(1);
-                showPage(pageId);
+            // --- Gérer l'état initial au chargement de la page (ex: si URL contient un hash) ---
+            let initialPage = window.location.hash.substring(1);
+            if (initialPage && document.getElementById(initialPage)) {
+                showPage(initialPage);
+                // Mettre à jour l'état 'active' du lien correspondant
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${initialPage}`) {
+                        link.classList.add('active');
+                    }
+                });
             } else {
-                // Affiche la page d'accueil par défaut (elle n'est pas 'hidden'
-                // mais on s'assure que les autres le sont)
+                // Si aucun hash ou hash invalide, afficher la page d'accueil par défaut
                 showPage('accueil');
+                document.querySelector('a[href="#accueil"]').classList.add('active');
             }
+
+            // Gérer les boutons Précédent/Suivant du navigateur
+            window.addEventListener('popstate', () => {
+                let pageId = window.location.hash.substring(1) || 'accueil';
+                showPage(pageId);
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${pageId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
+
 </body>
 </html>
