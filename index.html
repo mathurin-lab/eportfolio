@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Icônes (Script déplacé en bas du <body>) -->
+    <!-- Le script Lucide est supprimé car nous utilisons des SVG directs -->
 
     <style>
         /* Appliquer la police Inter par défaut */
@@ -34,34 +34,42 @@
     <!-- =========== HEADER / NAVBAR =========== -->
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
         <!-- Conteneur élargi pour la barre de navigation -->
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-end items-center"> <!-- Changé: container -> max-w-7xl px-6 -->
+        <!-- CHANGÉ: justify-end -> justify-center pour centrer les liens -->
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
             <!-- Nom / Logo (Supprimé) -->
             
             <!-- Liens de navigation (Desktop) -->
             <ul class="hidden md:flex space-x-5"> <!-- Espacement réduit -->
                 <!-- Le lien "Home" pointe vers #accueil -->
                 <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="home" class="w-4 h-4"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="plane" class="w-4 h-4"></i> <!-- Changé: globe-2 -> plane -->
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="leaf" class="w-4 h-4"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M20.4 14.5c-.2-1.3-.5-2.5-.9-3.7l-1.8-5.3c-.2-.7-.9-1-1.6-.9-.6.1-1.1.6-1 1.2l1.3 4.2-4.1 2.2c-1.8-.5-3.6-.9-5.4-1.2l-1.9-.3c-.6-.1-1.2.3-1.3.9-.1.6.3 1.2.9 1.3l1.9.3c1.9.3 3.9.7 5.8 1.3l4 2.1c.4.2.8.3 1.2.5.8.3 1.7.5 2.5.6.2 0 .5 0 .7-.1.6-.1 1.1-.6 1-1.2zM21 18c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v2zM6.5 17.5c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-2c0-.3-.1-.5-.3-.7-.2-.2-.4-.3-.7-.3h-2zM12 11.1c-.2-.3-.4-.5-.7-.7-.2-.2-.5-.3-.7-.3h-2c-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-.2l-1-2.1z"/></svg>
+Click here to expand the code
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="briefcase" class="w-4 h-4"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
                 <!-- Onglet Contact Supprimé -->
@@ -69,7 +77,8 @@
 
             <!-- Bouton Menu Mobile -->
             <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
-                <i data-lucide="menu"></i>
+                <!-- CHANGÉ: Icône SVG directe -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </nav>
         
@@ -77,27 +86,33 @@
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
             <ul class="flex flex-col items-center py-4 space-y-5"> <!-- Espace vertical légèrement augmenté -->
                 <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="plane" class="w-5 h-5"></i> <!-- Changé: globe-2 -> plane -->
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="leaf" class="w-5 h-5"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20.4 14.5c-.2-1.3-.5-2.5-.9-3.7l-1.8-5.3c-.2-.7-.9-1-1.6-.9-.6.1-1.1.6-1 1.2l1.3 4.2-4.1 2.2c-1.8-.5-3.6-.9-5.4-1.2l-1.9-.3c-.6-.1-1.2.3-1.3.9-.1.6.3 1.2.9 1.3l1.9.3c1.9.3 3.9.7 5.8 1.3l4 2.1c.4.2.8.3 1.2.5.8.3 1.7.5 2.5.6.2 0 .5 0 .7-.1.6-.1 1.1-.6 1-1.2zM21 18c0 .6-.4 1-1 1h-2c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v2zM6.5 17.5c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-2c0-.3-.1-.5-.3-.7-.2-.2-.4-.3-.7-.3h-2zM12 11.1c-.2-.3-.4-.5-.7-.7-.2-.2-.5-.3-.7-.3h-2c-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7v2c0 .3.1.5.3.7.2.2.4.3.7.3h2c.3 0 .5-.1.7-.3.2-.2.3-.4.3-.7v-.2l-1-2.1z"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    <!-- CHANGÉ: Icône SVG directe -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
                 <!-- Onglet Contact Supprimé -->
@@ -149,12 +164,14 @@
                 <div class="flex flex-wrap gap-4 justify-center">
                     <!-- Remplace '#' par ton email -->
                     <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <!-- CHANGÉ: Icône SVG directe -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
                     <!-- Remplace '#' par ton lien LinkedIn -->
                     <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        <!-- CHANGÉ: Icône SVG directe -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         LinkedIn
                     </a>
                     <!-- Lien GitHub (Supprimé) -->
@@ -239,13 +256,12 @@
 
     <!-- =========== SCRIPTS JS =========== -->
     
-    <!-- Script Lucide (DÉPLACÉ ICI pour corriger le chargement) -->
-    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <!-- Script Lucide (SUPPRIMÉ car nous utilisons des SVG directs) -->
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Initialisation des icônes Lucide
-            lucide.createIcons();
+            // Initialisation des icônes Lucide (SUPPRIMÉE, plus nécessaire)
+            // lucide.createIcons();
 
             // --- Gestion du Menu Mobile ---
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
