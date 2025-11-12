@@ -168,12 +168,12 @@
                 <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
                 <div class="flex flex-wrap gap-4 justify-center">
                     <!-- Bouton Email -->
-                    <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+                    <a href="mailto:mathurin.viot@etu.toulouse-inp.fr" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
                     <!-- Bouton LinkedIn -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                    <a href="https://www.linkedin.com/in/mathurin-viot-86830a32a/?locale=en_US" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         LinkedIn
                     </a>
@@ -252,7 +252,7 @@
                     <!-- Compétence 1 -->
                     <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
                         <!-- SVG Icône pour Automation -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M12 20v-6M12 14v.01"/><path d="M12 6v.01"/><path d="M12 12v.01"/><path d="M18 12v.01"/><path d="M6 12v.01"/><path d="m16.5 16.5.01.01"/><path d="m7.5 7.5.01.01"/><path d="m16.5 7.5.01.01"/><path d="m7.5 16.5.01.01"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M12 20v-6M12 14v.01"/><path d="M12 6v.01"/><path d="M12 12v.01"/><path d="M18 12v.01"/><path d="M6 12v.01"/><path d="m16.5 16.5.01.01"/><path d="m7.5 7.5.01.01"/><path d'="m16.5 7.5.01.01"/><path d="m7.5 16.5.01.01"/></svg>
                         <h5 class="text-xl font-bold text-indigo-300 mb-2">Real-Time Automation</h5>
                         <p class="text-gray-400">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
                     </div>
@@ -299,15 +299,87 @@
             </div>
         </section>
 
-        <!-- SECTION: International Mobility (Cachée) -->
-        <section id="mobility" class="page-section hidden py-20">
+        <!-- NOUVELLE SECTION: International Mobility (Cachée) -->
+        <section id="mobility" class="page-section hidden py-12 md:py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 International Mobility
             </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
-                <p class="text-lg text-gray-300">
-                    (Here, we will add content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
+
+            <!-- 1. La Carte Interactive -->
+            <div id="map-top" class="max-w-6xl mx-auto px-6 mb-16">
+                <p class="text-center text-lg text-gray-400 mb-6">
+                    Click on a highlighted country to discover my experiences and projects.
                 </p>
+                <!-- Conteneur de la carte (position relative pour les hotspots) -->
+                <div class="relative w-full shadow-2xl rounded-lg">
+                    <!--
+                      ACTION REQUISE:
+                      1. Trouve une image de carte du monde qui te plaît (de préférence sombre ou "tech").
+                      2. Enregistre-la sous "assets/world-map.png".
+                      3. Dé-commente la ligne <img> ci-dessous.
+                    -->
+                    <img src="assets/world-map.png" alt="World Map" class="w-full rounded-lg">
+                    <!-- <div class="w-full h-[500px] bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">(Image de la carte du monde 'assets/world-map.png' à ajouter)</div> -->
+
+                    <!-- Hotspot: USA -->
+                    <a href="#details-usa" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 35%; left: 25%;" aria-label="Details for USA">
+                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    </a>
+                    
+                    <!-- Hotspot: Germany -->
+                    <a href="#details-germany" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 30%; left: 48%;" aria-label="Details for Germany">
+                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    </a>
+
+                    <!-- Hotspot: Japan -->
+                    <a href="#details-japan" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 36%; left: 80%;" aria-label="Details for Japan">
+                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    </a>
+
+                    <!-- Hotspot: Madagascar -->
+                    <a href="#details-madagascar" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 68%; left: 57%;" aria-label="Details for Madagascar">
+                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Les Sections de Contenu (une pour chaque pays) -->
+            <div class="max-w-5xl mx-auto px-6 space-y-12">
+                <!-- Section USA -->
+                <div id="details-usa" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
+                    <h3 class="text-3xl font-bold text-white mb-4">United States</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        (Contenu pour les États-Unis... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
+                    </p>
+                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
+                </div>
+
+                <!-- Section Germany -->
+                <div id="details-germany" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
+                    <h3 class="text-3xl font-bold text-white mb-4">Germany</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        (Contenu pour l'Allemagne... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
+                    </p>
+                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
+                </div>
+
+                <!-- Section Japan -->
+                <div id="details-japan" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
+                    <h3 class="text-3xl font-bold text-white mb-4">Japan</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        (Contenu pour le Japon... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
+                    </p>
+                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
+                </div>
+
+                <!-- Section Madagascar -->
+                <div id="details-madagascar" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
+                    <h3 class="text-3xl font-bold text-white mb-4">Madagascar</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        (Contenu pour Madagascar... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
+                    </p>
+                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
+                </div>
             </div>
         </section>
 
@@ -343,7 +415,7 @@
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
                     (Here, we will add content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </p>
+                </image.png>
             </div>
         </section>
 
@@ -353,7 +425,7 @@
     <footer class="bg-gray-900 border-t border-gray-700 mt-20">
         <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
-            <p class="mt-2">Built with ❤️, HTML, and Tailwind CSS.</p>
+            
         </div>
     </footer>
 
@@ -417,37 +489,83 @@
                     window.scrollTo(0, 0); 
                 });
             });
+            
+            // --- Gérer les clics sur les liens d'ancre internes (la carte) ---
+            // On cherche tous les liens qui ne sont PAS des .nav-link mais qui ont un #
+            const anchorLinks = document.querySelectorAll('a[href^="#"]:not(.nav-link)');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Fait défiler jusqu'à l'élément
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start' 
+                        });
+                        
+                        // Met à jour l'URL sans déclencher le script de navigation principal
+                        history.pushState(null, null, `${window.location.pathname}${targetId}`);
+                    }
+                });
+            });
+
 
             // --- Gérer l'état initial au chargement de la page (ex: si URL contient un hash) ---
             let initialPage = window.location.hash.substring(1);
-            if (initialPage && document.getElementById(initialPage)) {
+            
+            // Gérer les ancres internes (ex: #details-usa)
+            const internalAnchor = ['details-usa', 'details-germany', 'details-japan', 'details-madagascar', 'map-top'].find(id => id === initialPage);
+
+            if (internalAnchor) {
+                // On est sur un lien interne, on affiche la page "mobility"
+                showPage('mobility');
+                updateActiveLink('mobility');
+                
+                // On défile jusqu'à l'ancre
+                setTimeout(() => {
+                    document.getElementById(internalAnchor).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100); // Léger délai pour s'assurer que la section est visible
+
+            } else if (initialPage && document.getElementById(initialPage)) {
+                // C'est un lien de page principal (ex: #engineering)
                 showPage(initialPage);
-                // Mettre à jour l'état 'active' du lien correspondant
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-                document.querySelectorAll(`a[href="#${initialPage}"]`).forEach(activeLink => {
-                    activeLink.classList.add('active');
-                });
+                updateActiveLink(initialPage);
             } else {
-                // Si aucun hash ou hash invalide, afficher la page d'accueil par défaut
+                // Page par défaut
                 showPage('accueil');
-                document.querySelectorAll('a[href="#accueil"]').forEach(activeLink => {
-                    activeLink.classList.add('active');
-                });
+                updateActiveLink('accueil');
             }
 
             // Gérer les boutons Précédent/Suivant du navigateur
             window.addEventListener('popstate', () => {
                 let pageId = window.location.hash.substring(1) || 'accueil';
-                showPage(pageId);
+                
+                const internalAnchor = ['details-usa', 'details-germany', 'details-japan', 'details-madagascar', 'map-top'].find(id => id === pageId);
+
+                if (internalAnchor) {
+                    showPage('mobility');
+                    updateActiveLink('mobility');
+                } else if (document.getElementById(pageId)) {
+                    showPage(pageId);
+                    updateActiveLink(pageId);
+                } else {
+                    showPage('accueil');
+                    updateActiveLink('accueil');
+                }
+            });
+
+            // Fonction utilitaire pour mettre à jour le lien actif
+            function updateActiveLink(targetId) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                document.querySelectorAll(`a[href="#${pageId}"]`).forEach(activeLink => {
+                document.querySelectorAll(`a[href="#${targetId}"]`).forEach(activeLink => {
                     activeLink.classList.add('active');
                 });
-            });
+            }
         });
     </script>
 
