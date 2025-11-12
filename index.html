@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Icônes -->
-    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <!-- Icônes (Script déplacé en bas du <body>) -->
 
     <style>
         /* Appliquer la police Inter par défaut */
@@ -34,7 +33,8 @@
 
     <!-- =========== HEADER / NAVBAR =========== -->
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-end items-center"> <!-- Changé: justify-between -> justify-end -->
+        <!-- Conteneur élargi pour la barre de navigation -->
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-end items-center"> <!-- Changé: container -> max-w-7xl px-6 -->
             <!-- Nom / Logo (Supprimé) -->
             
             <!-- Liens de navigation (Desktop) -->
@@ -106,11 +106,13 @@
     </header>
 
     <!-- =========== CONTENU PRINCIPAL =========== -->
-    <main class="container mx-auto px-6 py-12"> <!-- Plus besoin de pt-24, le header est 'sticky' pas 'fixed' -->
+    <main class="w-full"> <!-- Changé: Suppression de 'container mx-auto px-6 py-12' -->
 
         <!-- --- Section Accueil (Visible par défaut) --- -->
-        <section id="accueil" class="page-section flex items-center">
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- La section prend toute la largeur, le contenu à l'intérieur est centré et élargi -->
+        <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
+            <!-- Contenu de la page d'accueil (élargi) -->
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <!-- Colonne 1: Image -->
                 <div class="md:col-span-1">
                     <img src="https://placehold.co/500x500/374151/9ca3af?text=Mathurin+Viot" 
@@ -137,32 +139,28 @@
                             I am also drawn to the railway sector, particularly for its promising opportunities for innovation.
                         </p>
                     </div>
-
-                    <!-- Section Contact (Ajoutée ici) -->
-                    <div class="mt-10">
-                        <h3 class="text-xl font-semibold text-white mb-5">Contact Me</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <!-- Remplace '#' par ton email -->
-                            <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                                Email Me
-                            </a>
-                            <!-- Remplace '#' par ton lien LinkedIn -->
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                                LinkedIn
-                            </a>
-                            <!-- Lien vers ton GitHub (déjà configuré) -->
-                            <a href="https://github.com/mathurin-lab/eportfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                                <i data-lucide="github" class="w-5 h-5"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Fin de la Section Contact -->
-
+                    <!-- Section Contact (Déplacée HORS de la colonne) -->
                 </div>
             </div>
+
+            <!-- Section Contact (Maintenant en dessous et centrée) -->
+            <div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
+                <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <!-- Remplace '#' par ton email -->
+                    <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        Email Me
+                    </a>
+                    <!-- Remplace '#' par ton lien LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        LinkedIn
+                    </a>
+                    <!-- Lien GitHub (Supprimé) -->
+                </div>
+            </div>
+            <!-- Fin de la Section Contact -->
         </section>
 
         <!-- --- Section Engineering course (Cachée par défaut) --- -->
@@ -170,26 +168,80 @@
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Engineering Course
             </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6"> <!-- Ajout de px-6 -->
                 <p class="text-lg text-gray-300">
                     (Here, we will integrate the **timeline** of your engineering course, your subjects, and key projects.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Contact (Supprimée) --- -->
+        <!-- --- Section International Mobility (Cachée par défaut) --- -->
+        <!-- RESTAURÉE -->
+        <section id="mobility" class="page-section hidden py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+                International Mobility
+            </h2>
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
+                <p class="text-lg text-gray-300">
+                    (Content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Section Sustainability (Cachée par défaut) --- -->
+        <!-- RESTAURÉE -->
+        <section id="sustainability" class="page-section hidden py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+                Sustainability & Civic Engagement
+            </h2>
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
+                <p class="text-lg text-gray-300">
+                    (Content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Section Sport (Cachée par défaut) --- -->
+        <!-- RESTAURÉE -->
+        <section id="sport" class="page-section hidden py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+                Sport & other activities
+            </h2>
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
+                <p class="text-lg text-gray-300">
+                    (Content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Section Career (Cachée par défaut) --- -->
+        <!-- RESTAURÉE -->
+        <section id="career" class="page-section hidden py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+                Career Development
+            </h2>
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
+                <p class="text-lg text-gray-300">
+                    (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
+                </p>
+            </div>
+        </section>
 
     </main>
 
     <!-- =========== FOOTER =========== -->
     <footer class="bg-gray-900 border-t border-gray-700 mt-20">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500"> <!-- Changé: container -> max-w-7xl px-6 -->
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
             <p class="mt-2">Built with ❤️, HTML, and Tailwind CSS.</p>
         </div>
     </footer>
 
     <!-- =========== SCRIPTS JS =========== -->
+    
+    <!-- Script Lucide (DÉPLACÉ ICI pour corriger le chargement) -->
+    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Initialisation des icônes Lucide
