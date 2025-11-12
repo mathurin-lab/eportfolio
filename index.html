@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Icônes (Correction du lien) -->
+    <!-- Icônes -->
     <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
 
     <style>
@@ -24,126 +24,158 @@
             background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
             background-size: 40px 40px;
         }
+        /* Pour s'assurer que les sections remplissent au moins l'écran */
+        .page-section {
+            min-height: calc(100vh - 12rem); /* (100vh - hauteur du header et du footer) */
+        }
     </style>
 </head>
 <body class="text-gray-200">
 
     <!-- =========== HEADER / NAVBAR =========== -->
-    <header class="bg-gray-900/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Nom / Logo -->
-            <a href="#accueil" class="text-2xl font-bold text-white hover:text-indigo-400 transition-colors">
+            <a href="#accueil" class="nav-link text-2xl font-bold text-white hover:text-indigo-400 transition-colors">
                 Mathurin Viot
             </a>
             
             <!-- Liens de navigation (Desktop) -->
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#accueil" class="font-medium hover:text-indigo-400 transition-colors">Home</a></li>
-                <li><a href="#a-propos" class="font-medium hover:text-indigo-400 transition-colors">About Me</a></li>
-                <li><a href="#parcours" class="font-medium hover:text-indigo-400 transition-colors">My Journey</a></li>
-                <li><a href="#projets" class="font-medium hover:text-indigo-400 transition-colors">My Projects</a></li>
-                <li><a href="#veille" class="font-medium hover:text-indigo-400 transition-colors">My Watch</a></li>
-                <li><a href="#contact" class="font-medium hover:text-indigo-400 transition-colors">Contact Me</a></li>
+                <!-- Le lien "Home" pointe vers #accueil -->
+                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors">Home</a></li>
+                <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors">Engineering course</a></li>
+                <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors">International Mobility</a></li>
+                <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors">Sustainability & Civic Engagement</a></li>
+                <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors">Sport & other activities</a></li>
+                <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors">Career Development</a></li>
+                <li><a href="#contact" class="nav-link font-medium hover:text-indigo-400 transition-colors">Contact</a></li>
             </ul>
 
-            <!-- Bouton Menu Mobile (pour plus tard) -->
+            <!-- Bouton Menu Mobile -->
             <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
                 <i data-lucide="menu"></i>
             </button>
         </nav>
         
-        <!-- Menu Mobile (caché par défaut, pour plus tard) -->
+        <!-- Menu Mobile (caché par défaut) -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
             <ul class="flex flex-col items-center py-4 space-y-4">
-                <li><a href="#accueil" class="font-medium hover:text-indigo-400 transition-colors">Home</a></li>
-                <li><a href="#a-propos" class="font-medium hover:text-indigo-400 transition-colors">About Me</a></li>
-                <li><a href="#parcours" class="font-medium hover:text-indigo-400 transition-colors">My Journey</a></li>
-                <li><a href="#projets" class="font-medium hover:text-indigo-400 transition-colors">My Projects</a></li>
-                <li><a href="#veille" class="font-medium hover:text-indigo-400 transition-colors">My Watch</a></li>
-                <li><a href="#contact" class="font-medium hover:text-indigo-400 transition-colors">Contact Me</a></li>
+                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors">Home</a></li>
+                <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors">Engineering course</a></li>
+                <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors">International Mobility</a></li>
+                <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors">Sustainability & Civic Engagement</a></li>
+                <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors">Sport & other activities</a></li>
+                <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors">Career Development</a></li>
+                <li><a href="#contact" class="nav-link font-medium hover:text-indigo-400 transition-colors">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- =========== CONTENU PRINCIPAL =========== -->
-    <main class="container mx-auto px-6 pt-24"> <!-- pt-24 pour laisser de la place à la navbar fixe -->
+    <main class="container mx-auto px-6 py-12"> <!-- Plus besoin de pt-24, le header est 'sticky' pas 'fixed' -->
 
-        <!-- --- Section Accueil --- -->
-        <section id="accueil" class="min-h-screen flex items-center justify-center text-center">
-            <div class="max-w-3xl">
-                <span class="text-indigo-400 font-semibold">Hi, I'm Mathurin Viot</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold mt-4 text-white leading-tight">
-                    Web Developer & Solution Creator
-                </h1>
-                <p class="text-lg text-gray-400 mt-6 max-w-xl mx-auto">
-                    Passionate about innovation and digital marketing, I transform your ideas into high-performance, aesthetic web projects.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#projets" class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
-                        Discover My Projects
-                    </a>
-                    <a href="#contact" class="bg-gray-700 text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                        Contact Me
-                    </a>
+        <!-- --- Section Accueil (Visible par défaut) --- -->
+        <section id="accueil" class="page-section flex items-center">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Colonne 1: Image -->
+                <div class="md:col-span-1">
+                    <img src="https://placehold.co/500x500/374151/9ca3af?text=Mathurin+Viot" 
+                         alt="Portrait de Mathurin Viot" 
+                         class="rounded-lg shadow-2xl w-full max-w-md mx-auto h-auto transform transition-all duration-500 hover:scale-105">
+                </div>
+
+                <!-- Colonne 2: Texte de présentation -->
+                <div class="md:col-span-1">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+                        Mathurin's e-portfolio
+                    </h1>
+                    <h2 class="text-2xl font-semibold text-indigo-300 mb-6">
+                        Welcome on my e-portfolio!
+                    </h2>
+                    <div class="text-lg text-gray-300 space-y-4">
+                        <p>
+                            I am Mathurin VIOT, a student engineer at ENSEEIHT. I am currently in my second year at ENSEEIHT (equivalent to a Master’s 1) within the Energy, Electronics and Automation department, specializing in Energy/Mechatronics/Automation.
+                        </p>
+                        <p>
+                            I have a strong interest in robotics: whether in programming or dynamic structure modeling, as well as in industrial process automation (Industry 4.0, cobots).
+                        </p>
+                        <p>
+                            I am also drawn to the railway sector, particularly for its promising opportunities for innovation.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- --- Section À propos de moi --- -->
-        <section id="a-propos" class="min-h-screen py-20">
+        <!-- --- Section Engineering course (Cachée par défaut) --- -->
+        <section id="engineering" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
-                About Me
+                Engineering Course
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300">
-                    (Here, you can introduce yourself. We'll add a photo, your key skills, and a more marketing-focused text explaining who you are and what drives you.)
+                    (Here, we will integrate the **timeline** of your engineering course, your subjects, and key projects.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Mon parcours --- -->
-        <section id="parcours" class="min-h-screen py-20">
+        <!-- --- Section International Mobility (Cachée par défaut) --- -->
+        <section id="mobility" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
-                My Journey
+                International Mobility
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300">
-                    (This is where we will integrate a beautiful **timeline** to present your experiences and education visually and interactively.)
+                    (Content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Mes projets --- -->
-        <section id="projets" class="min-h-screen py-20">
+        <!-- --- Section Sustainability (Cachée par défaut) --- -->
+        <section id="sustainability" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
-                My Projects
+                Sustainability & Civic Engagement
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300">
-                    (We'll display your projects as interactive "cards", with images, descriptions, technologies used, and links to the project and code.)
+                    (Content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Ma veille --- -->
-        <section id="veille" class="min-h-screen py-20">
+        <!-- --- Section Sport (Cachée par défaut) --- -->
+        <section id="sport" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
-                My Watch
+                Sport & other activities
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300">
-                    (Here, we can imagine a dynamic feed (perhaps connected to your watch tools?) or a more graphical section to present the topics that interest you.)
-                </section>
+                    (Content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
+                </p>
+            </div>
         </section>
 
-        <!-- --- Section Me contacter --- -->
-        <section id="contact" class="min-h-screen py-20">
+        <!-- --- Section Career (Cachée par défaut) --- -->
+        <section id="career" class="page-section hidden py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
+                Career Development
+            </h2>
+            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                <p class="text-lg text-gray-300">
+                    (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
+                </p>
+            </div>
+        </section>
+
+        <!-- --- Section Contact (Cachée par défaut) --- -->
+        <section id="contact" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Contact Me
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                 <p class="text-lg text-gray-300">
-                    (We'll integrate a simple and effective contact form, as well as links to your professional social networks like LinkedIn and GitHub.)
+                    (Here we will put the contact form and links to social networks.)
                 </p>
             </div>
         </section>
@@ -160,12 +192,11 @@
 
     <!-- =========== SCRIPTS JS =========== -->
     <script>
-        // Attendre que le DOM soit chargé pour exécuter les scripts
         document.addEventListener("DOMContentLoaded", function() {
             // Initialisation des icônes Lucide
             lucide.createIcons();
 
-            // Script simple pour le menu mobile (on le complètera)
+            // --- Gestion du Menu Mobile ---
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -173,12 +204,51 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Fermer le menu mobile en cliquant sur un lien
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+            // --- Gestion de la Navigation Interne ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+
+            // Fonction pour afficher une page et cacher les autres
+            function showPage(pageId) {
+                // Cache toutes les sections
+                pageSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                
+                // Affiche la section demandée
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                }
+            }
+
+            // Ajoute les écouteurs d'événements aux liens de navigation
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Empêche le comportement de l'ancre
+                    
+                    // Extrait l'ID de la page (ex: "accueil" depuis "index.html#accueil")
+                    const pageId = link.hash.substring(1); // .hash renvoie "#accueil", .substring(1) enlève le "#"
+                    
+                    // Affiche la page correspondante
+                    showPage(pageId);
+
+                    // Ferme le menu mobile si on est en vue mobile
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             });
+
+            // Gérer le cas où l'utilisateur arrive avec un hash dans l'URL
+            if (window.location.hash) {
+                const pageId = window.location.hash.substring(1);
+                showPage(pageId);
+            } else {
+                // Affiche la page d'accueil par défaut (elle n'est pas 'hidden'
+                // mais on s'assure que les autres le sont)
+                showPage('accueil');
+            }
         });
     </script>
 </body>
