@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathurin Viot - E-Portfolio</title>
-    <!-- Chargement de Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Utilisation de la police "Inter" --><link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chargement de la police 'Inter' depuis Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
@@ -19,7 +23,7 @@
             background-size: 20px 20px;
         }
 
-        /* Style pour la page active (surlignage) */
+        /* Style pour l'animation d'apparition des pages */
         .page-section {
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -29,7 +33,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Style pour les liens de navigation */
+        /* Style pour le lien de navigation actif */
         .nav-link.active {
             color: #818cf8; /* Couleur indigo-400 */
         }
@@ -37,43 +41,62 @@
 </head>
 <body class="text-gray-200">
 
-    <!-- =========== HEADER / NAVBAR =========== --><header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        <!-- Conteneur élargi pour la barre de navigation --><nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
+    <!-- En-tête de navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
+        <!-- Navigation pour écrans larges -->
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
             
-            <!-- Liens de navigation (Desktop) --><ul class="hidden md:flex w-full justify-evenly">
-                <!-- Le lien "Home" pointe vers #accueil --><li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> <!-- Par défaut 'active' --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <!-- Menu pour Desktop (md et plus) -->
+            <ul class="hidden md:flex w-full justify-evenly">
+                <!-- Lien Home -->
+                <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> 
+                    <!-- SVG Icône Home -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
+                <!-- Lien Engineering course -->
                 <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
+                    <!-- SVG Icône Mortarboard (diplôme) -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
+                <!-- Lien International Mobility -->
                 <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
+                    <!-- SVG Icône Avion -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
+                <!-- Lien Sustainability -->
                 <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
+                    <!-- SVG Icône Feuille -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
+                <!-- Lien Sport -->
                 <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Vrai icône de ballon de basket --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
+                    <!-- SVG Icône Ballon de basket -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
+                <!-- Lien Career Development -->
                 <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
+                    <!-- SVG Icône Mallette -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
             </ul>
 
-            <!-- Bouton Menu Mobile --><button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
+            <!-- Bouton du menu Mobile (md et moins) -->
+            <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </nav>
         
-        <!-- Menu Mobile (caché par défaut) --><div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
+        <!-- Le menu mobile déroulant (caché par défaut) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
             <ul class="flex flex-col items-center py-4 space-y-5">
-                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> <!-- Par défaut 'active' --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
@@ -89,7 +112,8 @@
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Vrai icône de ballon de basket --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
+                    <!-- SVG Icône Ballon de basket -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
@@ -100,18 +124,25 @@
         </div>
     </header>
 
-    <!-- =========== CONTENU PRINCIPAL =========== --><main class="w-full"> 
+    <!-- Contenu principal -->
+    <main class="w-full"> 
 
-        <!-- --- Section Accueil (Visible par défaut) --- --><section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
-            <!-- Contenu de la page d'accueil (élargi) --><div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Colonne 1: Image --><div class="md:col-span-1 flex justify-center items-center">
+        <!-- SECTION: Accueil (Visible par défaut) -->
+        <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
+            <!-- Grille de présentation (Photo + Texte) -->
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Colonne de gauche: Photo -->
+                <div class="md:col-span-1 flex justify-center items-center">
                     <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-500/30">
+                        <!-- IMPORTANT: Remplace 'assets/ma-photo.jpg' par le chemin vers ta photo dans ton projet -->
                         <img src="assets/ma-photo.jpg" 
                              alt="Photo de Mathurin Viot" 
-                             class="w-full h-full object-cover"></div>
+                             class="w-full h-full object-cover"> 
+                    </div>
                 </div>
                 
-                <!-- Colonne 2: Texte de présentation --><div class="md:col-span-1">
+                <!-- Colonne de droite: Texte de présentation -->
+                <div class="md:col-span-1">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                         Mathurin's e-portfolio
                     </h1>
@@ -132,14 +163,17 @@
                 </div>
             </div>
 
-            <!-- Section Contact (Maintenant en dessous et centrée) --><div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
+            <!-- Section Contact Me (en bas de la page d'accueil) -->
+            <div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
                 <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <!-- Remplace '#' par ton email --><a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+                    <!-- Bouton Email -->
+                    <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
-                    <!-- Remplace '#' par ton lien LinkedIn --><a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                    <!-- Bouton LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         LinkedIn
                     </a>
@@ -147,28 +181,36 @@
             </div>
         </section>
 
-        <!-- --- Section Engineering course (REMPLIE) --- --><section id="engineering" class="page-section hidden py-20">
-            <!-- Titre principal de la section --><h2 class="text-4xl font-bold text-center text-white mb-16">
+        <!-- SECTION: Engineering Course (Cachée par défaut) -->
+        <section id="engineering" class="page-section hidden py-12 md:py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Engineering Course
-            <!-- 1. Section sur l'ENSEEIHT --><div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            </h2>
+
+            <!-- 1. Section sur l'ENSEEIHT -->
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <!-- Colonne de gauche: Texte et Logo -->
                 <div>
-                    <img src="assets/enseeiht-logo.png" 
+                    <!-- CHANGEMENT ICI: Ajout de l'extension .png -->
+                    <img src="assets/logo-N7.png" 
                          alt="Logo ENSEEIHT N7" 
                          class="w-48 mb-6">
                     <h3 class="text-3xl font-bold text-white mb-4">
                         Toulouse INP - ENSEEIHT (N7)
                     </h3>
-                    <p class="text-lg text-gray-300 mb-4">
-                        Founded in 1907, ENSEEIHT (or "N7") is a top-tier French engineering school within the Toulouse INP, located in the heart of Toulouse.
-                    </p>
-                    <p class="text-lg text-gray-300">
-                        Its core mission is to train engineers to meet the grand challenges of the digital revolution and the energy transition.
-                    </p>
+                    <div class="space-y-4 text-gray-300">
+                        <p>
+                            Founded in 1907, ENSEEIHT (or "N7") is a top-tier French engineering school within the Toulouse INP, located in the heart of Toulouse.
+                        </p>
+                        <p>
+                            Its core mission is to train engineers to meet the grand challenges of the digital revolution and the energy transition, built on a foundation of scientific excellence and strong industry partnerships.
+                        </p>
+                    </div>
                 </div>
                 <!-- Colonne de droite: Image de l'école -->
                 <div>
-                    <img src="assets/enseeiht-building.jpg" 
+                    <!-- CHANGEMENT ICI: Ajout de l'extension .jpg -->
+                    <img src="assets/photo-n7.jpg" 
                          alt="ENSEEIHT School Building" 
                          class="w-full h-full object-cover rounded-xl shadow-2xl">
                 </div>
@@ -177,50 +219,22 @@
             <!-- Séparateur -->
             <hr class="my-16 border-gray-700 max-w-7xl mx-auto">
 
-            <!-- 2. Section sur Mon Parcours (REDESIGN MARKETING) -->
+            <!-- 2. Section sur Mon Parcours (Version 2 colonnes) -->
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-3xl font-bold text-white mb-10 text-center">My Path: From 3EA to ACISE</h3>
-                
-                <!-- Stepper Component -->
-                <div class="relative max-w-3xl mx-auto bg-gray-800/50 p-8 rounded-lg shadow-xl">
-                    <!-- La ligne verticale de progression -->
-                    <div class="absolute left-9 top-9 bottom-9 w-0.5 bg-indigo-400" aria-hidden="true"></div>
-
-                    <!-- Etape 1: Département -->
-                    <div class="relative mb-10 pl-16">
-                        <div class="absolute left-0 top-1 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl ring-4 ring-gray-900">
-                            1
-                        </div>
-                        <h4 class="text-xl font-semibold text-indigo-300 mb-2">My Department: 3EA</h4>
+                <h3 class="text-3xl font-bold text-white mb-10 text-center">My Path: Energy, Electronics & Automation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Colonne 1: Mon département -->
+                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-xl">
+                        <h4 class="text-2xl font-semibold text-indigo-300 mb-3">My Department: 3EA</h4>
                         <p class="text-gray-300">
-                            I am a second-year student (M1 equivalent) in the "Energy, Electronics, and Automation" (3EA) department.
+                            I am currently a second-year student (M1 equivalent) in the "Energy, Electronics, and Automation" (3EA) department. My specialization is in <strong>Energy</strong>, where I study the principles of electrical energy production, conversion, and management.
                         </p>
                     </div>
-
-                    <!-- Etape 2: Spécialisation -->
-                    <div class="relative mb-10 pl-16">
-                        <div class="absolute left-0 top-1 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl ring-4 ring-gray-900">
-                            2
-                        </div>
-                        <h4 class="text-xl font-semibold text-indigo-300 mb-2">My Specialization: Energy</h4>
+                    <!-- Colonne 2: Mon objectif -->
+                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-xl">
+                        <h4 class="text-2xl font-semibold text-green-400 mb-3">My Goal: The ACISE Track</h4>
                         <p class="text-gray-300">
-                            My primary specialization is in **Energy**, where I study the principles of electrical energy production, conversion, and management.
-                        </p>
-                    </div>
-
-                    <!-- Etape 3: Objectif -->
-                    <div class="relative pl-16">
-                        <div class="absolute left-0 top-1 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white ring-4 ring-gray-900">
-                            <!-- Icône Cible (Objectif) -->
-                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-6 6m0 0l-6-6m6 6V9a6 6 0 0112 0v3" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15.75l.75-1.313A6 6 0 0115.75 9H18a6 6 0 016 6v.75" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 15.75a3 3 0 01-3-3" />
-                            </svg>
-                        </div>
-                        <h4 class="text-xl font-semibold text-green-400 mb-2">My Goal: The ACISE Track</h4>
-                        <p class="text-gray-300">
-                            My objective is to join the **ACISE** track to focus on real-time control, embedded systems, and industrial automation.
+                            My objective is to join the <strong>ACISE</strong> (Architecture de Commande et Informatique des Systèmes Embarqués) track for my S8 and S9 semesters. This specialization is at the intersection of real-time control, embedded systems, and industrial automation.
                         </p>
                     </div>
                 </div>
@@ -229,53 +243,54 @@
             <!-- Séparateur -->
             <hr class="my-16 border-gray-700 max-w-7xl mx-auto">
 
-            <!-- 3. Section Focus sur ACISE (basée sur la brochure) -->
+            <!-- 3. Section sur le focus ACISE -->
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-3xl font-bold text-white mb-12 text-center">Focus: ACISE Specialization</h3>
+                <h3 class="text-3xl font-bold text-white mb-10 text-center">Focus: ACISE Specialization</h3>
                 
-                <!-- Compétences clés -->
-                <h4 class="text-2xl font-semibold text-white mb-6">Core Competencies</h4>
+                <h4 class="text-2xl font-semibold text-white mb-6 text-center">Core Competencies</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <!-- Tuile 1 -->
+                    <!-- Compétence 1 -->
                     <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-indigo-400 mb-4"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                        <h5 class="text-xl font-bold text-white mb-2">Real-Time Automation</h5>
-                        <p class="text-gray-300 text-sm">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
+                        <!-- SVG Icône pour Automation -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M12 20v-6M12 14v.01"/><path d="M12 6v.01"/><path d="M12 12v.01"/><path d="M18 12v.01"/><path d="M6 12v.01"/><path d="m16.5 16.5.01.01"/><path d="m7.5 7.5.01.01"/><path d="m16.5 7.5.01.01"/><path d="m7.5 16.5.01.01"/></svg>
+                        <h5 class="text-xl font-bold text-indigo-300 mb-2">Real-Time Automation</h5>
+                        <p class="text-gray-400">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
                     </div>
-                    <!-- Tuile 2 -->
+                    <!-- Compétence 2 -->
                     <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-indigo-400 mb-4"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 12h6"/><path d="M12 9v6"/><path d="M18 9v.01"/><path d="M18 15v.01"/><path d="M6 9v.01"/><path d="M6 15v.01"/><path d="M12 18v.01"/><path d="M12 6v.01"/></svg>
-                        <h5 class="text-xl font-bold text-white mb-2">Embedded & Critical Systems</h5>
-                        <p class="text-gray-300 text-sm">Design of algorithms for decision-making, piloting, and ensuring functional safety and security.</p>
+                        <!-- SVG Icône pour Embedded -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 16v-4"/><path d="M12 8h.01"/><path d="M7 16v-4"/><path d="M7 8h.01"/><path d="M17 16v-4"/><path d="M17 8h.01"/></svg>
+                        <h5 class="text-xl font-bold text-indigo-300 mb-2">Embedded & Critical Systems</h5>
+                        <p class="text-gray-400">Design of algorithms for decision-making, piloting, and ensuring functional safety and security.</p>
                     </div>
-                    <!-- Tuile 3 -->
+                    <!-- Compétence 3 -->
                     <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-indigo-400 mb-4"><path d="M18 10a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4v-4a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v0z"/><path d="M18 22a4 4 0 0 1-4-4h-4a4 4 0 0 1-4-4v-4a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v0z"/></svg>
-                        <h5 class="text-xl font-bold text-white mb-2">System Mastery</h5>
-                        <p class="text-gray-300 text-sm">Control of continuous-state (robots, machines) and discrete-event (energy management) systems.</p>
+                        <!-- SVG Icône pour Mastery/Control -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v5Z"/><path d="M18 9h2c1.1 0 2 .9 2 2v9c0 .6-.4 1.1-.9 1.4l-3.1 1.6c-.5.2-1.1.2-1.6 0l-3.1-1.6c-.5-.3-.9-.8-.9-1.4V11c0-1.1.9-2 2-2h2"/></svg>
+                        <h5 class="text-xl font-bold text-indigo-300 mb-2">System Mastery</h5>
+                        <p class="text-gray-400">Control of continuous-state (robots, machines) and discrete-event (energy management) systems.</p>
                     </div>
                 </div>
 
-                <!-- Domaines d'application -->
-                <h4 class="text-2xl font-semibold text-white mb-6">Key Application Domains</h4>
+                <h4 class="text-2xl font-semibold text-white mb-6 text-center">Key Application Domains</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Domaine 1 -->
                     <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="assets/domain-smartgrid.jpg" 
+                        <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=Smart+Grids" 
                              alt="Smart Grid" 
                              class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
                         <p class="p-4 text-center font-medium text-white">Smart Grids & Energy Transition</p>
                     </div>
                     <!-- Domaine 2 -->
                     <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="assets/domain-robotics.jpg" 
+                        <img src="https://placehold.co/600x400/166534/FFFFFF?text=Robotics" 
                              alt="Robotic Arm" 
                              class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
                         <p class="p-4 text-center font-medium text-white">Robotics & New Mobilities</p>
                     </div>
                     <!-- Domaine 3 -->
                     <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="assets/domain-embedded.jpg" 
+                        <img src="https://placehold.co/600x400/991B1B/FFFFFF?text=Embedded+Systems" 
                              alt="Embedded System" 
                              class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
                         <p class="p-4 text-center font-medium text-white">Embedded & Critical Systems</p>
@@ -284,60 +299,66 @@
             </div>
         </section>
 
-        <!-- --- Section International Mobility (Cachée par défaut) --- --><section id="mobility" class="page-section hidden py-20">
+        <!-- SECTION: International Mobility (Cachée) -->
+        <section id="mobility" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 International Mobility
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
-                    (Content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
-                </g>
+                    (Here, we will add content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
+                </p>
             </div>
         </section>
 
-        <!-- --- Section Sustainability (Cachée par défaut) --- --><section id="sustainability" class="page-section hidden py-20">
+        <!-- SECTION: Sustainability (Cachée) -->
+        <section id="sustainability" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sustainability & Civic Engagement
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
-                    (Content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
+                    (Here, we will add content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Sport (Cachée par défaut) --- --><section id="sport" class="page-section hidden py-20">
+        <!-- SECTION: Sport (Cachée) -->
+        <section id="sport" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sport & other activities
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
-                    (Content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
+                    (Here, we will add content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
                 </p>
             </div>
         </section>
 
-        <!-- --- Section Career (Cachée par défaut) --- --><section id="career" class="page-section hidden py-20">
+        <!-- SECTION: Career Development (Cachée) -->
+        <section id="career" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Career Development
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
-                    (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </g>
+                    (Here, we will add content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
+                </p>
             </div>
         </section>
 
     </main>
 
-    <!-- =========== FOOTER =========== --><footer class="bg-gray-900 border-t border-gray-700 mt-20">
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 border-t border-gray-700 mt-20">
         <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
             <p class="mt-2">Built with ❤️, HTML, and Tailwind CSS.</p>
         </div>
     </footer>
 
-    <!-- =========== SCRIPTS JS =========== --><script>
+    <!-- Script de navigation -->
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             
             // --- Gestion du Menu Mobile ---
@@ -346,6 +367,7 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const pageSections = document.querySelectorAll('.page-section');
 
+            // Ouvre/ferme le menu mobile
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
@@ -378,17 +400,11 @@
                     navLinks.forEach(navLink => {
                         navLink.classList.remove('active');
                     });
-                    link.classList.add('active');
-
-                    // Pour le menu mobile, on cherche le lien parent et on l'active aussi
-                    if (link.closest('#mobile-menu')) {
-                        const desktopLink = document.querySelector(`header ul a[href="${link.getAttribute('href')}"]`);
-                        if(desktopLink) desktopLink.classList.add('active');
-                    } else {
-                        const mobileLink = document.querySelector(`#mobile-menu a[href="${link.getAttribute('href')}"]`);
-                        if(mobileLink) mobileLink.classList.add('active');
-                    }
-
+                    
+                    // Trouver le lien sur desktop et mobile et les activer
+                    document.querySelectorAll(`a[href="#${targetId}"]`).forEach(activeLink => {
+                        activeLink.classList.add('active');
+                    });
 
                     // Fermer le menu mobile après le clic
                     if (!mobileMenu.classList.contains('hidden')) {
@@ -397,6 +413,8 @@
 
                     // Optionnel: change l'URL dans la barre sans recharger
                     history.pushState(null, null, `#${targetId}`);
+                    // Remonte en haut de la page pour la nouvelle section
+                    window.scrollTo(0, 0); 
                 });
             });
 
@@ -407,14 +425,16 @@
                 // Mettre à jour l'état 'active' du lien correspondant
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if(link.getAttribute('href') === `#${initialPage}`) {
-                        link.classList.add('active');
-                    }
+                });
+                document.querySelectorAll(`a[href="#${initialPage}"]`).forEach(activeLink => {
+                    activeLink.classList.add('active');
                 });
             } else {
                 // Si aucun hash ou hash invalide, afficher la page d'accueil par défaut
                 showPage('accueil');
-                document.querySelector('a[href="#accueil"]').classList.add('active');
+                document.querySelectorAll('a[href="#accueil"]').forEach(activeLink => {
+                    activeLink.classList.add('active');
+                });
             }
 
             // Gérer les boutons Précédent/Suivant du navigateur
@@ -423,9 +443,9 @@
                 showPage(pageId);
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if(link.getAttribute('href') === `#${pageId}`) {
-                        link.classList.add('active');
-                    }
+                });
+                document.querySelectorAll(`a[href="#${pageId}"]`).forEach(activeLink => {
+                    activeLink.classList.add('active');
                 });
             });
         });
