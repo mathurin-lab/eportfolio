@@ -34,11 +34,8 @@
 
     <!-- =========== HEADER / NAVBAR =========== -->
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Nom / Logo -->
-            <a href="#accueil" class="nav-link text-2xl font-bold text-white hover:text-indigo-400 transition-colors">
-                Mathurin Viot
-            </a>
+        <nav class="container mx-auto px-6 py-4 flex justify-end items-center"> <!-- Changé: justify-between -> justify-end -->
+            <!-- Nom / Logo (Supprimé) -->
             
             <!-- Liens de navigation (Desktop) -->
             <ul class="hidden md:flex space-x-5"> <!-- Espacement réduit -->
@@ -52,7 +49,7 @@
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="globe-2" class="w-4 h-4"></i>
+                    <i data-lucide="plane" class="w-4 h-4"></i> <!-- Changé: globe-2 -> plane -->
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
@@ -67,10 +64,7 @@
                     <i data-lucide="briefcase" class="w-4 h-4"></i>
                     Career Development
                 </a></li>
-                <li><a href="#contact" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                    Contact
-                </a></li>
+                <!-- Onglet Contact Supprimé -->
             </ul>
 
             <!-- Bouton Menu Mobile -->
@@ -91,7 +85,7 @@
                     Engineering course
                 </a></li>
                 <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="globe-2" class="w-5 h-5"></i>
+                    <i data-lucide="plane" class="w-5 h-5"></i> <!-- Changé: globe-2 -> plane -->
                     International Mobility
                 </a></li>
                 <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
@@ -106,10 +100,7 @@
                     <i data-lucide="briefcase" class="w-5 h-5"></i>
                     Career Development
                 </a></li>
-                <li><a href="#contact" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <i data-lucide="mail" class="w-5 h-5"></i>
-                    Contact
-                </a></li>
+                <!-- Onglet Contact Supprimé -->
             </ul>
         </div>
     </header>
@@ -146,6 +137,30 @@
                             I am also drawn to the railway sector, particularly for its promising opportunities for innovation.
                         </p>
                     </div>
+
+                    <!-- Section Contact (Ajoutée ici) -->
+                    <div class="mt-10">
+                        <h3 class="text-xl font-semibold text-white mb-5">Contact Me</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <!-- Remplace '#' par ton email -->
+                            <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                Email Me
+                            </a>
+                            <!-- Remplace '#' par ton lien LinkedIn -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                LinkedIn
+                            </a>
+                            <!-- Lien vers ton GitHub (déjà configuré) -->
+                            <a href="https://github.com/mathurin-lab/eportfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fin de la Section Contact -->
+
                 </div>
             </div>
         </section>
@@ -162,65 +177,7 @@
             </div>
         </section>
 
-        <!-- --- Section International Mobility (Cachée par défaut) --- -->
-        <section id="mobility" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                International Mobility
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
-                <p class="text-lg text-gray-300">
-                    (Content for International Mobility... We can add a map, photos, and descriptions of your experiences abroad.)
-                </p>
-            </div>
-        </section>
-
-        <!-- --- Section Sustainability (Cachée par défaut) --- -->
-        <section id="sustainability" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Sustainability & Civic Engagement
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
-                <p class="text-lg text-gray-300">
-                    (Content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
-                </p>
-            </div>
-        </section>
-
-        <!-- --- Section Sport (Cachée par défaut) --- -->
-        <section id="sport" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Sport & other activities
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
-                <p class="text-lg text-gray-300">
-                    (Content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
-                </p>
-            </div>
-        </section>
-
-        <!-- --- Section Career (Cachée par défaut) --- -->
-        <section id="career" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Career Development
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
-                <p class="text-lg text-gray-300">
-                    (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </p>
-            </div>
-        </section>
-
-        <!-- --- Section Contact (Cachée par défaut) --- -->
-        <section id="contact" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Contact Me
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
-                <p class="text-lg text-gray-300">
-                    (Here we will put the contact form and links to social networks.)
-                </p>
-            </div>
-        </section>
+        <!-- --- Section Contact (Supprimée) --- -->
 
     </main>
 
