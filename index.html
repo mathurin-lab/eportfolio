@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathurin Viot - E-Portfolio</title>
     
-    <!-- Chargement de Tailwind CSS -->
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Chargement de la police 'Inter' depuis Google Fonts -->
+    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
             background-size: 20px 20px;
         }
 
-        /* Style pour l'animation d'apparition des pages */
+        /* Style pour la page active (surlignage) */
         .page-section {
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -33,7 +33,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Style pour le lien de navigation actif */
+        /* Style pour les liens de navigation */
         .nav-link.active {
             color: #818cf8; /* Couleur indigo-400 */
         }
@@ -41,58 +41,54 @@
 </head>
 <body class="text-gray-200">
 
-    <!-- En-tête de navigation -->
+    
+    <!-- En-tête et Navigation -->
     <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        <!-- Navigation pour écrans larges -->
+        
         <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
             
-            <!-- Menu pour Desktop (md et plus) -->
+            <!-- Navigation Bureau -->
             <ul class="hidden md:flex w-full justify-evenly">
-                <!-- Lien Home -->
+                
                 <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> 
-                    <!-- SVG Icône Home -->
+                    <!-- SVG pour Home -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
-                <!-- Lien Engineering course -->
                 <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG Icône Mortarboard (diplôme) -->
+                    <!-- SVG pour Engineering -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
                     Engineering course
                 </a></li>
-                <!-- Lien International Mobility -->
                 <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG Icône Avion -->
+                    <!-- SVG pour Mobility (Avion) -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                     International Mobility
                 </a></li>
-                <!-- Lien Sustainability -->
                 <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG Icône Feuille -->
+                    <!-- SVG pour Sustainability -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
                     Sustainability & Civic Engagement
                 </a></li>
-                <!-- Lien Sport -->
                 <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG Icône Ballon de basket -->
+                    <!-- SVG pour Sport (Ballon de basket) -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
-                <!-- Lien Career Development -->
                 <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG Icône Mallette -->
+                    <!-- SVG pour Career -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
             </ul>
 
-            <!-- Bouton du menu Mobile (md et moins) -->
+            <!-- Bouton Menu Mobile -->
             <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </nav>
         
-        <!-- Le menu mobile déroulant (caché par défaut) -->
+        <!-- Menu Mobile Déroulant -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
             <ul class="flex flex-col items-center py-4 space-y-5">
                 <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> 
@@ -112,7 +108,7 @@
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- SVG Icône Ballon de basket -->
+                    <!-- SVG pour Sport (Ballon de basket) -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
@@ -124,14 +120,17 @@
         </div>
     </header>
 
-    <!-- Contenu principal -->
+    
+    <!-- Contenu Principal -->
     <main class="w-full"> 
 
-        <!-- SECTION: Accueil (Visible par défaut) -->
+        
+        <!-- SECTION ACCUEIL (Visible par défaut) -->
         <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
-            <!-- Grille de présentation (Photo + Texte) -->
+            
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Colonne de gauche: Photo -->
+                
+                <!-- Colonne Image -->
                 <div class="md:col-span-1 flex justify-center items-center">
                     <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-500/30">
                         <img src="assets/ma-photo.jpg" 
@@ -140,7 +139,8 @@
                     </div>
                 </div>
                 
-                <!-- Colonne de droite: Texte de présentation -->
+                
+                <!-- Colonne Texte -->
                 <div class="md:col-span-1">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                         Mathurin's e-portfolio
@@ -162,15 +162,18 @@
                 </div>
             </div>
 
-            <!-- Section Contact Me (en bas de la page d'accueil) -->
+            
+            <!-- Section Contact Me (sur la page d'accueil) -->
             <div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
                 <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
                 <div class="flex flex-wrap gap-4 justify-center">
+                    
                     <!-- Bouton Email -->
                     <a href="mailto:mathurin.viot@etu.toulouse-inp.fr" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
+                    
                     <!-- Bouton LinkedIn -->
                     <a href="https://www.linkedin.com/in/mathurin-viot-86830a32a/?locale=en_US" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
@@ -180,249 +183,251 @@
             </div>
         </section>
 
-        <!-- SECTION: Engineering Course (Cachée par défaut) -->
-        <section id="engineering" class="page-section hidden py-12 md:py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Engineering Course
-            </h2>
-
-            <!-- 1. Section sur l'ENSEEIHT -->
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Colonne de gauche: Texte et Logo -->
-                <div>
-                    <img src="assets/logo-N7.png" 
-                         alt="Logo ENSEEIHT N7" 
-                         class="w-48 mb-6">
-                    <h3 class="text-3xl font-bold text-white mb-4">
-                        Toulouse INP - ENSEEIHT (N7)
-                    </h3>
-                    <div class="space-y-4 text-gray-300">
-                        <p>
+        
+        <!-- SECTION ENGINEERING (Cachée par défaut) -->
+        <section id="engineering" class="page-section hidden w-full py-12 md:py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    Engineering Course
+                </h2>
+                
+                <!-- Présentation ENSEEIHT -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center bg-gray-900/50 rounded-lg shadow-xl p-8 md:p-12 mb-16">
+                    <div class="md:col-span-1 flex justify-center items-center">
+                        <img src="assets/logo-N7.png" alt="Logo ENSEEIHT" class="w-48 h-auto bg-white p-4 rounded-lg shadow-md">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-3xl font-bold text-white mb-4">Toulouse INP - ENSEEIHT (N7)</h3>
+                        <p class="text-lg text-gray-300 mb-4">
                             Founded in 1907, ENSEEIHT (or "N7") is a top-tier French engineering school within the Toulouse INP, located in the heart of Toulouse.
                         </p>
-                        <p>
-                            Its core mission is to train engineers to meet the grand challenges of the digital revolution and the energy transition, built on a foundation of scientific excellence and strong industry partnerships.
+                        <p class="text-lg text-gray-300">
+                            Its core mission is to train engineers to meet the grand challenges of the digital revolution and the energy transition.
                         </p>
                     </div>
+                    <div class="md:col-span-3 rounded-lg overflow-hidden shadow-lg mt-4">
+                        <img src="assets/photo-n7.jpg" alt="ENSEEIHT Building" class="w-full h-64 object-cover">
+                    </div>
                 </div>
-                <!-- Colonne de droite: Image de l'école -->
-                <div>
-                    <img src="assets/photo-n7.jpg" 
-                         alt="ENSEEIHT School Building" 
-                         class="w-full h-full object-cover rounded-xl shadow-2xl">
-                </div>
-            </div>
 
-            <!-- Séparateur -->
-            <hr class="my-16 border-gray-700 max-w-7xl mx-auto">
-
-            <!-- 2. Section sur Mon Parcours (Version 2 colonnes) -->
-            <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-3xl font-bold text-white mb-10 text-center">My Path: Energy, Electronics & Automation</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mon Parcours -->
+                <h3 class="text-3xl font-bold text-white text-center mb-10">My Path: Energy, Electronics & Automation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     <!-- Colonne 1: Mon département -->
-                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-xl">
-                        <h4 class="text-2xl font-semibold text-indigo-300 mb-3">My Department: 3EA</h4>
-                        <p class="text-gray-300">
-                            I am currently a second-year student (M1 equivalent) in the "Energy, Electronics, and Automation" (3EA) department. My specialization is in <strong>Energy</strong>, where I study the principles of electrical energy production, conversion, and management.
+                    <div class="bg-gray-800/50 p-8 rounded-lg shadow-lg">
+                        <h4 class="text-2xl font-semibold text-indigo-400 mb-4">My Department: 3EA</h4>
+                        <p class="text-lg text-gray-300">
+                            I am currently a second-year student (M1 equivalent) in the "Energy, Electronics, and Automation" (3EA) department. My specialization is in **Energy**, where I study the principles of electrical energy production, conversion, and management.
                         </p>
                     </div>
                     <!-- Colonne 2: Mon objectif -->
-                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-xl">
-                        <h4 class="text-2xl font-semibold text-green-400 mb-3">My Goal: The ACISE Track</h4>
-                        <p class="text-gray-300">
-                            My objective is to join the <strong>ACISE</strong> (Architecture de Commande et Informatique des Systèmes Embarqués) track for my S8 and S9 semesters. This specialization is at the intersection of real-time control, embedded systems, and industrial automation.
+                    <div class="bg-gray-800/50 p-8 rounded-lg shadow-lg">
+                        <h4 class="text-2xl font-semibold text-indigo-400 mb-4">My Goal: The ACISE Track</h4>
+                        <p class="text-lg text-gray-300">
+                            My objective is to join the **ACISE** (Architecture de Commande et Informatique des Systèmes Embarqués) track for my S8 and S9 semesters. This specialization is at the intersection of real-time control, embedded systems, and industrial automation.
                         </p>
                     </div>
                 </div>
+
+                <!-- Focus ACISE -->
+                <div class="bg-gray-900/50 rounded-lg shadow-xl p-8 md:p-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-10">Focus: ACISE Specialization</h3>
+                    
+                    <!-- Compétences Clés -->
+                    <h4 class="text-2xl font-semibold text-white mb-6 text-center">Core Competencies</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <!-- Compétence 1 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            <h5 class="text-xl font-bold text-white mb-2">Real-Time Automation</h5>
+                            <p class="text-gray-300">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
+                        </div>
+                        <!-- Compétence 2 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="9" x2="9" y1="9" y2="9.01"></line><line x1="15" x2="15" y1="9" y2="9.01"></line><line x1="9" x2="9" y1="15" y2="15.01"></line><line x1="15"x2="15" y1="15" y2="15.01"></line></svg>
+                            <h5 class="text-xl font-bold text-white mb-2">Embedded & Critical Systems</h5>
+                            <p class="text-gray-300">Design of algorithms for decision-making, piloting, and ensuring functional safety and security.</p>
+                        </div>
+                        <!-- Compétence 3 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M22 14h-2"></path><path d="M14 2v2"></path><path d="M14 20v-2"></path></svg>
+                            <h5 class="text-xl font-bold text-white mb-2">System Mastery</h5>
+                            <p class="text-gray-300">Control of continuous-state (robots, machines) and discrete-event (energy management) systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Domaines d'Application -->
+                    <h4 class="text-2xl font-semibold text-white mb-6 text-center">Key Application Domains</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Domaine 1 -->
+                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
+                            <img src="https://placehold.co/600x400/312e81/ffffff?text=Smart+Grid" alt="Smart Grids" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
+                                <h5 class="text-2xl font-extrabold text-white">Smart Grids & Energy Transition</h5>
+                            </div>
+                        </div>
+                        <!-- Domaine 2 -->
+                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
+                            <img src="https://placehold.co/600x400/15803d/ffffff?text=Robotics" alt="Robotics" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
+                                <h5 class="text-2xl font-extrabold text-white">Robotics & New Mobilities</h5>
+                            </div>
+                        </div>
+                        <!-- Domaine 3 -->
+                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
+                            <img src="https://placehold.co/600x400/b91c1c/ffffff?text=Embedded" alt="Embedded Systems" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
+                                <h5 class="text-2xl font-extrabold text-white">Embedded & Critical Systems</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Séparateur -->
-            <hr class="my-16 border-gray-700 max-w-7xl mx-auto">
-
-            <!-- 3. Section sur le focus ACISE -->
+        
+        <!-- SECTION MOBILITY (Cachée par défaut) -->
+        <section id="mobility" class="page-section hidden w-full py-12 md:py-20">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-3xl font-bold text-white mb-10 text-center">Focus: ACISE Specialization</h3>
-                
-                <h4 class="text-2xl font-semibold text-white mb-6 text-center">Core Competencies</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <!-- Compétence 1 -->
-                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <!-- SVG Icône pour Automation -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M12 20v-6M12 14v.01"/><path d="M12 6v.01"/><path d="M12 12v.01"/><path d="M18 12v.01"/><path d="M6 12v.01"/><path d="m16.5 16.5.01.01"/><path d="m7.5 7.5.01.01"/><path d="m16.5 7.5.01.01"/><path d="m7.5 16.5.01.01"/></svg>
-                        <h5 class="text-xl font-bold text-indigo-300 mb-2">Real-Time Automation</h5>
-                        <p class="text-gray-400">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
-                    </div>
-                    <!-- Compétence 2 -->
-                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <!-- SVG Icône pour Embedded -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 16v-4"/><path d="M12 8h.01"/><path d="M7 16v-4"/><path d="M7 8h.01"/><path d="M17 16v-4"/><path d="M17 8h.01"/></svg>
-                        <h5 class="text-xl font-bold text-indigo-300 mb-2">Embedded & Critical Systems</h5>
-                        <p class="text-gray-400">Design of algorithms for decision-making, piloting, and ensuring functional safety and security.</p>
-                    </div>
-                    <!-- Compétence 3 -->
-                    <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                        <!-- SVG Icône pour Mastery/Control -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-indigo-400"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v5Z"/><path d="M18 9h2c1.1 0 2 .9 2 2v9c0 .6-.4 1.1-.9 1.4l-3.1 1.6c-.5.2-1.1.2-1.6 0l-3.1-1.6c-.5-.3-.9-.8-.9-1.4V11c0-1.1.9-2 2-2h2"/></svg>
-                        <h5 class="text-xl font-bold text-indigo-300 mb-2">System Mastery</h5>
-                        <p class="text-gray-400">Control of continuous-state (robots, machines) and discrete-event (energy management) systems.</p>
-                    </div>
-                </div>
-
-                <h4 class="text-2xl font-semibold text-white mb-6 text-center">Key Application Domains</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Domaine 1 -->
-                    <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=Smart+Grids" 
-                             alt="Smart Grid" 
-                             class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
-                        <p class="p-4 text-center font-medium text-white">Smart Grids & Energy Transition</p>
-                    </div>
-                    <!-- Domaine 2 -->
-                    <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/166534/FFFFFF?text=Robotics" 
-                             alt="Robotic Arm" 
-                             class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
-                        <p class="p-4 text-center font-medium text-white">Robotics & New Mobilities</p>
-                    </div>
-                    <!-- Domaine 3 -->
-                    <div class="bg-gray-800/50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/991B1B/FFFFFF?text=Embedded+Systems" 
-                             alt="Embedded System" 
-                             class="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110">
-                        <p class="p-4 text-center font-medium text-white">Embedded & Critical Systems</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: International Mobility (Cachée) -->
-        <section id="mobility" class="page-section hidden py-12 md:py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                International Mobility
-            </h2>
-
-            <!-- 1. La Carte Interactive -->
-            <div id="map-top" class="max-w-6xl mx-auto px-6 mb-16">
-                <p class="text-center text-lg text-gray-400 mb-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-6">
+                    International Mobility
+                </h2>
+                <p class="text-lg text-indigo-300 text-center mb-12 max-w-2xl mx-auto">
                     Click on a highlighted country to discover my experiences and projects.
-                </p>
-                <!-- Conteneur de la carte (position relative pour les hotspots) -->
-                <div class="relative w-full shadow-2xl rounded-lg overflow-hidden">
+                </pre>
+                
+                <!-- Carte du Monde Interactive -->
+                <!-- Utilise un 'padding-bottom' pour forcer un ratio d'aspect -->
+                <div class="relative w-full max-w-5xl mx-auto mb-16" style="padding-bottom: 50%;"> <!-- Ratio 2:1, ajuste si besoin -->
+                    <!-- L'image de la carte -->
+                    <img src="assets/world-map.png" 
+                         alt="World Map" 
+                         class="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-2xl">
                     
-                    <!-- Carte du Monde en SVG (100% fiable) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000" class="w-full h-auto bg-gray-800">
-                        <path fill="#2D3748" d="M1999.5 736.2L1998.5 736.2 1998.5 735.7 1998 735.7 1998 735.2 1997.5 735.2 1997.5 734.7 1997 734.7 1997 734.2 1996.5 734.2 1996.5 733.7 1996 733.7 1996 733.2 1995.5 733.2 1995.5 732.7 1995 732.7 1995 732.2 1994.5 732.2 1994.5 731.7 1994 731.7 1994 731.2 1993.5 731.2 1993.5 730.7 1993 730.7 1993 730.2 1992.5 730.2 1992.5 729.7 1992 729.7 1992 729.2 1991.5 729.2 1991.5 728.7 1991 728.7 1991 728.2 1990.5 728.2 1990.5 727.7 1990 727.7 1990 727.2 1989.5 727.2 1989.5 726.7 1989 726.7 1989 726.2 1988.5 726.2 1988.5 725.7 1988 725.7 1988 725.2 1987.5 725.2 1987.5 724.7 1987 724.7 1987 724.2 1986.5 724.2 1986.5 723.7 1986 723.7 1986 723.2 1985.5 723.2 1985.5 722.7 1985 722.7 1985 722.2 1984.5 722.2 1984.5 721.7 1984 721.7 1984 721.2 1983.5 721.2 1983.5 720.7 1983 720.7 1983 720.2 1982.5 720.2 1982.5 719.7 1982 719.7 1982 719.2 1981.5 719.2 1981.5 718.7 1981 718.7 1981 718.2 1980.5 718.2 1980.5 717.7 1980 717.7 1980 717.2 1979.5 717.2 1979.5 716.7 1979 716.7 1979 716.2 1978.5 716.2 1978.5 715.7 1978 715.7 1978 715.2 1977.5 715.2 1977.5 714.7 1977 714.7 1977 714.2 1976.5 714.2 1976.5 713.7 1976 713.7 1976 713.2 1975.5 713.2 1975.5 712.7 1975 712.7 1975 712.2 1974.5 712.2 1974.5 711.7 1974 711.7 1974 711.2 1973.5 711.2 1973.5 710.7 1973 710.7 1973 710.2 1972.5 710.2 1972.5 709.7 1972 709.7 1972 709.2 1971.5 709.2 1971.5 708.7 1971 708.7 1971 708.2 1970.5 708.2 1970.5 707.7 1970 707.7 1970 707.2 1969.5 707.2 1969.5 706.7 1969 706.7 1969 706.2 1968.5 706.2 1968.5 705.7 1968 705.7 1968 705.2 1967.5 705.2 1967.5 704.7 1967 704.7 1967 704.2 1966.5 704.2 1966.5 703.7 1966 703.7 1966 703.2 1965.5 703.2 1965.5 702.7 1965 702.7 1965 702.2 1964.5 702.2 1964.5 701.7 1964 701.7 1964 701.2 1963.5 701.2 1963.5 700.7 1963 700.7 1963 700.2 1962.5 700.2 1962.5 699.7 1962 699.7 1962 699.2 1961.5 699.2 1961.5 698.7 1961 698.7 1961 698.2 1960.5 698.2 1960.5 697.7 1960 697.7 1960 697.2 1959.5 697.2 1959.5 696.7 1959 696.7 1959 696.2 1958.5 696.2 1958.5 695.7 1958 695.7 1958 695.2 1957.5 695.2 1957.5 694.7 1957 694.7 1957 694.2 1956.5 694.2 1956.5 693.7 1956 693.7 1956 693.2 1955.5 693.2 1955.5 692.7 1955 692.7 1955 692.2 1954.5 692.2 1954.5 691.7 1954 691.7 1954 691.2 1953.5 691.2 1953.5 690.7 1953 690.7 1953 690.2 1952.5 690.2 1952.5 689.7 1952 689.7 1952 689.2 1951.5 689.2 1951.5 688.7 1951 688.7 1951 688.2 1950.5 688.2 1950.5 687.7 1950 687.7 1950 687.2 1949.5 687.2 1949.5 686.7 1949 686.7 1949 686.2 1948.5 686.2 1948.5 685.7 1948 685.7 1948 685.2 1947.5 685.2 1947.5 684.7 1947 684.7 1947 684.2 1946.5 684.2 1946.5 683.7 1946 683.7 1946 683.2 1945.5 683.2 1945.5 682.7 1945 682.7 1945 682.2 1944.5 682.2 1944.5 681.7 1944 681.7 1944 681.2 1943.5 681.2 1943.5 680.7 1943 680.7 1943 680.2 1942.5 680.2 1942.5 679.7 1942 679.7 1942 679.2 1941.5 679.2 1941.5 678.7 1941 678.7 1941 678.2 1940.5 678.2 1940.5 677.7 1940 677.7 1940 677.2 1939.5 677.2 1939.5 676.7 1939 676.7 1939 676.2 1938.5 676.2 1938.5 675.7 1938 675.7 1938 675.2 1937.5 675.2 1937.5 674.7 1937 674.7 1937 674.2 1936.5 674.2 1936.5 673.7 1936 673.7 1936 673.2 1935.5 673.2 1935.5 672.7 1935 672.7 1935 672.2 1934.5 672.2 1934.5 671.7 1934 671.7 1934 671.2 1933.5 671.2 1933.5 670.7 1933 670.7 1933 670.2 1932.5 670.2 1932.5 669.7 1932 669.7 1932 669.2 1931.5 669.2 1931.5 668.7 1931 668.7 1931 668.2 1930.5 668.2 1930.5 667.7 1930 667.7 1930 667.2 1929.5 667.2 1929.5 666.7 1929 666.7 1929 666.2 1928.5 666.2 1928.5 665.7 1928 665.7 1928 665.2 1927.5 665.2 1927.5 664.7 1927 664.7 1927 664.2 1926.5 664.2 1926.5 663.7 1926 663.7 1926 663.2 1925.5 663.2 1925.5 662.7 1925 662.7 1925 662.2 1924.5 662.2 1924.5 661.7 1924 661.7 1924 661.2 1923.5 661.2 1923.5 660.7 1923 660.7 1923 660.2 1922.5 660.2 1922.5 659.7 1922 659.7 1922 659.2 1921.5 659.2 1921.5 658.7 1921 658.7 1921 658.2 1920.5 658.2 1920.5 657.7 1920 657.7 1920 657.2 1919.5 657.2 1919.5 656.7 1919 656.7 1919 656.2 1918.5 656.2 1918.5 655.7 1918 655.7 1918 655.2 1917.5 655.2 1917.5 654.7 1917 654.7 1917 654.2 1916.5 654.2 1916.5 653.7 1916 653.7 1916 653.2 1915.5 653.2 1915.5 652.7 1915 652.7 1915 652.2 1914.5 652.2 1914.5 651.7 1914 651.7 1914 651.2 1913.5 651.2 1913.5 650.7 1913 650.7 1913 650.2 1912.5 650.2 1912.5 649.7 1912 649.7 1912 649.2 1911.5 649.2 1911.5 648.7 1911 648.7 1911 648.2 1910.5 648.2 1910.5 647.7 1910 647.7 1910 647.2 1909.5 647.2 1909.5 646.7 1909 646.7 1909 646.2 1908.5 646.2 1908.5 645.7 1908 645.7 1908 645.2 1907.5 645.2 1907.5 644.7 1907 644.7 1907 644.2 1906.5 644.2 1906.5 643.7 1906 643.7 1906 643.2 1905.5 643.2 1905.5 642.7 1905 642.7 1905 642.2 1904.5 642.2 1904.5 641.7 1904 641.7 1904 641.2 1903.5 641.2 1903.5 640.7 1903 640.7 1903 640.2 1902.5 640.2 1902.5 639.7 1902 639.7 1902 639.2 1901.5 639.2 1901.5 638.7 1901 638.7 1901 638.2 1900.5 638.2 1900.5 637.7 1900 637.7 1900 637.2 1899.5 637.2 1899.5 636.7 1899 636.7 1899 636.2 1898.5 636.2 1898.5 635.7 1898 635.7 1898 635.2 1897.5 635.2 1897.5 634.7 1897 634.7 1897 634.2 1896.5 634.2 1896.5 633.7 1896 633.7 1896 633.2 1895.5 633.2 1895.5 632.7 1895 632.7 1895 632.2 1894.5 632.2 1894.5 631.7 1894 631.7 1894 631.2 1893.5 631.2 1893.5 630.7 1893 630.7 1893 630.2 1892.5 630.2 1892.5 629.7 1892 629.7 1892 629.2 1891.5 629.2 1891.5 628.7 1891 628.7 1891 628.2 1890.5 628.2 1890.5 627.7 1890 627.7 1890 627.2 1889.5 627.2 1889.5 626.7 1889 626.7 1889 626.2 1888.5 626.2 1888.5 625.7 1888 625.7 1888 625.2 1887.5 625.2 1887.5 624.7 1887 624.7 1887 624.2 1886.5 624.2 1886.5 623.7 1886 623.7 1886 623.2 1885.5 623.2 1885.5 622.7 1885 622.7 1885 622.2 1884.5 622.2 1884.5 621.7 1884 621.7 1884 621.2 1883.5 621.2 1883.5 620.7 1883 620.7 1883 620.2 1882.5 620.2 1882.5 619.7 1882 619.7 1882 619.2 1881.5 619.2 1881.5 618.7 1881 618.7 1881 618.2 1880.5 618.2 1880.5 617.7 1880 617.7 1880 617.2 1879.5 617.2 1879.5 616.7 1879 616.7 1879 616.2 1878.5 616.2 1878.5 615.7 1878 615.7 1878 615.2 1877.5 615.2 1877.5 614.7 1877 614.7 1877 614.2 1876.5 614.2 1876.5 613.7 1876 613.7 1876 613.2 1875.5 613.2 1875.5 612.7 1875 612.7 1875 612.2 1874.5 612.2 1874.5 611.7 1874 611.7 1874 611.2 1873.5 611.2 1873.5 610.7 1873 610.7 1873 610.2 1872.5 610.2 1872.5 609.7 1872 609.7 1872 609.2 1871.5 609.2 1871.5 608.7 1871 608.7 1871 608.2 1870.5 608.2 1870.5 607.7 1870 607.7 1870 607.2 1869.5 607.2 1869.5 606.7 1869 606.7 1869 606.2 1868.5 606.2 1868.5 605.7 1868 605.7 1868 605.2 1867.5 605.2 1867.5 604.7 1867 604.7 1867 604.2 1866.5 604.2 1866.5 603.7 1866 603.7 1866 603.2 1865.5 603.2 1865.5 602.7 1865 602.7 1865 602.2 1864.5 602.2 1864.5 601.7 1864 601.7 1864 601.2 1863.5 601.2 1863.5 600.7 1863 600.7 1863 600.2 1862.5 600.2 1862.5 599.7 1862 599.7 1862 599.2 1861.5 599.2 1861.5 598.7 1861 598.7 1861 598.2 1860.5 598.2 1860.5 597.7 1860 597.7 1860 597.2 1859.5 597.2 1859.5 596.7 1859 596.7 1859 596.2 1858.5 596.2 1858.5 595.7 1858 595.7 1858 595.2 1857.5 595.2 1857.5 594.7 1857 594.7 1857 594.2 1856.5 594.2 1856.5 593.7 1856 593.7 1856 593.2 1855.5 593.2 1855.5 592.7 1855 592.7 1855 592.2 1854.5 592.2 1854.5 591.7 1854 591.7 1854 591.2 1853.5 591.2 1853.5 590.7 1853 590.7 1853 590.2 1852.5 590.2 1852.5 589.7 1852 589.7 1852 589.2 1851.5 589.2 1851.5 588.7 1851 588.7 1851 588.2 1850.5 588.2 1850.5 587.7 1850 587.7 1850 587.2 1849.5 587.2 1849.5 586.7 1849 586.7 1849 586.2 1848.5 586.2 1848.5 585.7 1848 585.7 1848 585.2 1847.5 585.2 1847.5 584.7 1847 584.7 1847 584.2 1846.5 584.2 1846.5 583.7 1846 583.7 1846 583.2 1845.5 583.2 1845.5 582.7 1845 582.7 1845 582.2 1844.5 582.2 1844.5 581.7 1844 581.7 1844 581.2 1843.5 581.2 1843.5 580.7 1843 580.7 1843 580.2 1842.5 580.2 1842.5 579.7 1842 579.7 1842 579.2 1841.5 579.2 1841.5 578.7 1841 578.7 1841 578.2 1840.5 578.2 1840.5 577.7 1840 577.7 1840 577.2 1839.5 577.2 1839.5 576.7 1839 576.7 1839 576.2 1838.5 576.2 1838.5 575.7 1838 575.7 1838 575.2 1837.5 575.2 1837.5 574.7 1837 574.7 1837 574.2 1836.5 574.2 1836.5 573.7 1836 573.7 1836 573.2 1835.5 573.2 1835.5 572.7 1835 572.7 1835 572.2 1834.5 572.2 1834.5 571.7 1834 571.7 1834 571.2 1833.5 571.2 1833.5 570.7 1833 570.7 1833 570.2 1832.5 570.2 1832.5 569.7 1832 569.7 1832 569.2 1831.5 569.2 1831.5 568.7 1831 568.7 1831 568.2 1830.5 568.2 1830.5 567.7 1830 567.7 1830 567.2 1829.5 567.2 1829.5 566.7 1829 566.7 1829 566.2 1828.5 566.2 1828.5 565.7 1828 565.7 1828 565.2 1827.5 565.2 1827.5 564.7 1827 564.7 1827 564.2 1826.5 564.2 1826.5 563.7 1826 563.7 1826 563.2 1825.5 563.2 1825.5 562.7 1825 562.7 1825 562.2 1824.5 562.2 1824.5 561.7 1824 561.7 1824 561.2 1823.5 561.2 1823.5 560.7 1823 560.7 1823 560.2 1822.5 560.2 1822.5 559.7 1822 559.7 1822 559.2 1821.5 559.2 1821.5 558.7 1821 558.7 1821 558.2 1820.5 558.2 1820.5 557.7 1820 557.7 1820 557.2 1819.5 557.2 1819.5 556.7 1819 556.7 1819 556.2 1818.5 556.2 1818.5 555.7 1818 555.7 1818 555.2 1817.5 555.2 1817.5 554.7 1817 554.7 1817 554.2 1816.5 554.2 1816.5 553.7 1816 553.7 1816 553.2 1815.5 553.2 1815.5 552.7 1815 552.7 1815 552.2 1814.5 552.2 1814.5 551.7 1814 551.7 1814 551.2 1813.5 551.2 1813.5 550.7 1813 550.7 1813 550.2 1812.5 550.2 1812.5 549.7 1812 549.7 1812 549.2 1811.5 549.2 1811.5 548.7 1811 548.7 1811 548.2 1810.5 548.2 1810.5 547.7 1810 547.7 1810 547.2 1809.5 547.2 1809.5 546.7 1809 546.7 1809 546.2 1808.5 546.2 1808.5 545.7 1808 545.7 1808 545.2 1807.5 545.2 1807.5 544.7 1807 544.7 1807 544.2 1806.5 544.2 1806.5 543.7 1806 543.7 1806 543.2 1805.5 543.2 1805.5 542.7 1805 542.7 1805 542.2 1804.5 542.2 1804.5 541.7 1804 541.7 1804 541.2 1803.5 541.2 1803.5 540.7 1803 540.7 1803 540.2 1802.5 540.2 1802.5 539.7 1802 539.7 1802 539.2 1801.5 539.2 1801.5 538.7 1801 538.7 1801 538.2 1800.5 538.2 1800.5 537.7 1800 537.7 1800 537.2 1799.5 537.2 1799.5 536.7 1799 536.7 1799 536.2 1798.5 536.2 1798.5 535.7 1798 535.7 1798 535.2 1797.5 535.2 1797.5 534.7 1797 534.7 1797 534.2 1796.5 534.2 1796.5 533.7 1796 533.7 1796 533.2 1795.5 533.2 1795.5 532.7 1795 532.7 1795 532.2 1794.5 532.2 1794.5 531.7 1794 531.7 1794 531.2 1793.5 531.2 1793.5 530.7 1793 530.7 1793 530.2 1792.5 530.2 1792.5 529.7 1792 529.7 1792 529.2 1791.5 529.2 1791.5 528.7 1791 528.7 1791 528.2 1790.5 528.2 1790.5 527.7 1790 527.7 1790 527.2 1789.5 527.2 1789.5 526.7 1789 526.7 1789 526.2 1788.5 526.2 1788.5 525.7 1788 525.7 1788 525.2 1787.5 525.2 1787.5 524.7 1787 524.7 1787 524.2 1786.5 524.2 1786.5 523.7 1786 523.7 1786 523.2 1785.5 523.2 1785.5 522.7 1785 522.7 1785 522.2 1784.5 522.2 1784.5 521.7 1784 521.7 1784 521.2 1783.5 521.2 1783.5 520.7 1783 520.7 1783 520.2 1782.5 520.2 1782.5 519.7 1782 519.7 1782 519.2 1781.5 519.2 1781.5 518.7 1781 518.7 1781 518.2 1780.5 518.2 1780.5 517.7 1780 517.7 1780 517.2 1779.5 517.2 1779.5 516.7 1779 516.7 1779 516.2 1778.5 516.2 1778.5 515.7 1778 515.7 1778 515.2 1777.5 515.2 1777.5 514.7 1777 514.7 1777 514.2 1776.5 514.2 1776.5 513.7 1776 513.7 1776 513.2 1775.5 513.2 1775.5 512.7 1775 512.7 1775 512.2 1774.5 512.2 1774.5 511.7 1774 511.7 1774 511.2 1773.5 511.2 1773.5 510.7 1773 510.7 1773 510.2 1772.5 510.2 1772.5 509.7 1772 509.7 1772 509.2 1771.5 509.2 1771.5 508.7 1771 508.7 1771 508.2 1770.5 508.2 1770.5 507.7 1770 507.7 1770 507.2 1769.5 507.2 1769.5 506.7 1769 506.7 1769 506.2 1768.5 506.2 1768.5 505.7 1768 505.7 1768 505.2 1767.5 505.2 1767.5 504.7 1767 504.7 1767 504.2 1766.5 504.2 1766.5 503.7 1766 503.7 1766 503.2 1765.5 503.2 1765.5 502.7 1765 502.7 1765 502.2 1764.5 502.2 1764.5 501.7 1764 501.7 1764 501.2 1763.5 501.2 1763.5 500.7 1763 500.7 1763 500.2 1762.5 500.2 1762.5 499.7 1762 499.7 1762 499.2 1761.5 499.2 1761.5 498.7 1761 498.7 1761 498.2 1760.5 498.2 1760.5 497.7 1760 497.7 1760 497.2 1759.5 497.2 1759.5 496.7 1759 496.7 1759 496.2 1758.5 496.2 1758.5 495.7 1758 495.7 1758 495.2 1757.5 495.2 1757.5 494.7 1757 494.7 1757 494.2 1756.5 494.2 1756.5 493.7 1756 493.7 1756 493.2 1755.5 493.2 1755.5 492.7 1755 492.7 1755 492.2 1754.5 492.2 1754.5 491.7 1754 491.7 1754 491.2 1753.5 491.2 1753.5 490.7 1753 490.7 1753 490.2 1752.5 490.2 1752.5 489.7 1752 489.7 1752 489.2 1751.5 489.2 1751.5 488.7 1751 488.7 1751 488.2 1750.5 488.2 1750.5 487.7 1750 487.7 1750 487.2 1749.5 487.2 1749.5 486.7 1749 486.7 1749 486.2 1748.5 486.2 1748.5 485.7 1748 485.7 1748 485.2 1747.5 485.2 1747.5 484.7 1747 484.7 1747 484.2 1746.5 484.2 1746.5 483.7 1746 483.7 1746 483.2 1745.5 483.2 1745.5 482.7 1745 482.7 1745 482.2 1744.5 482.2 1744.5 481.7 1744 481.7 1744 481.2 1743.5 481.2 1743.5 480.7 1743 480.7 1743 480.2 1742.5 480.2 1742.5 479.7 1742 479.7 1742 479.2 1741.5 479.2 1741.5 478.7 1741 478.7 1741 478.2 1740.5 478.2 1740.5 477.7 1740 477.7 1740 477.2 1739.5 477.2 1739.5 476.7 1739 476.7 1739 476.2 1738.5 476.2 1738.5 475.7 1738 475.7 1738 475.2 1737.5 475.2 1737.5 474.7 1737 474.7 1737 474.2 1736.5 474.2 1736.5 473.7 1736 473.7 1736 473.2 1735.5 473.2 1735.5 472.7 1735 472.7 1735 472.2 1734.5 472.2 1734.5 471.7 1734 471.7 1734 471.2 1733.5 471.2 1733.5 470.7 1733 470.7 1733 470.2 1732.5 470.2 1732.5 469.7 1732 469.7 1732 469.2 1731.5 469.2 1731.5 468.7 1731 468.7 1731 468.2 1730.5 468.2 1730.5 467.7 1730 467.7 1730 467.2 1729.5 467.2 1729.5 466.7 1729 466.7 1729 466.2 1728.5 466.2 1728.5 465.7 1728 465.7 1728 465.2 1727.5 465.2 1727.5 464.7 1727 464.7 1727 464.2 1726.5 464.2 1726.5 463.7 1726 463.7 1726 463.2 1725.5 463.2 1725.5 462.7 1725 462.7 1725 462.2 1724.5 462.2 1724.5 461.7 1724 461.7 1724 461.2 1723.5 461.2 1723.5 460.7 1723 460.7 1723 460.2 1722.5 460.2 1722.5 459.7 1722 459.7 1722 459.2 1721.5 459.2 1721.5 458.7 1721 458.7 1721 458.2 1720.5 458.2 1720.5 457.7 1720 457.7 1720 457.2 1719.5 457.2 1719.5 456.7 1719 456.7 1719 456.2 1718.5 456.2 1718.5 455.7 1718 455.7 1718 455.2 1717.5 455.2 1717.5 454.7 1717 454.7 1717 454.2 1716.5 454.2 1716.5 453.7 1716 453.7 1716 453.2 1715.5 453.2 1715.5 452.7 1715 452.7 1715 452.2 1714.5 452.2 1714.5 451.7 1714 451.7 1714 451.2 1713.5 451.2 1713.5 450.7 1713 450.7 1713 450.2 1712.5 450.2 1712.5 449.7 1712 449.7 1712 449.2 1711.5 449.2 1711.5 448.7 1711 448.7 1711 448.2 1710.5 448.2 1710.5 447.7 1710 447.7 1710 447.2 1709.5 447.2 1709.5 446.7 1709 446.7 1709 446.2 1708.5 446.2 1708.5 445.7 1708 445.7 1708 445.2 1707.5 445.2 1707.5 444.7 1707 444.7 1707 444.2 1706.5 444.2 1706.5 443.7 1706 443.7 1706 443.2 1705.5 443.2 1705.5 442.7 1705 442.7 1705 442.2 1704.5 442.2 1704.5 441.7 1704 441.7 1704 441.2 1703.5 441.2 1703.5 440.7 1703 440.7 1703 440.2 1702.5 440.2 1702.5 439.7 1702 439.7 1702 439.2 1701.5 439.2 1701.5 438.7 1701 438.7 1701 438.2 1700.5 438.2 1700.5 437.7 1700 437.7 1700 437.2 1699.5 437.2 1699.5 436.7 1699 436.7 1699 436.2 1698.5 436.2 1698.5 435.7 1698 435.7 1698 435.2 1697.5 435.2 1697.5 434.7 1697 434.7 1697 434.2 1696.5 434.2 1696.5 433.7 1696 433.7 1696 433.2 1695.5 433.2 1695.5 432.7 1695 432.7 1695 432.2 1694.5 432.2 1694.5 431.7 1694 431.7 1694 431.2 1693.5 431.2 1693.5 430.7 1693 430.7 1693 430.2 1692.5 430.2 1692.5 429.7 1692 429.7 1692 429.2 1691.5 429.2 1691.5 428.7 1691 428.7 1691 428.2 1690.5 428.2 1690.5 427.7 1690 427.7 1690 427.2 1689.5 427.2 1689.5 426.7 1689 426.7 1689 426.2 1688.5 426.2 1688.5 425.7 1688 425.7 1688 425.2 1687.5 425.2 1687.5 424.7 1687 424.7 1687 424.2 1686.5 424.2 1686.5 423.7 1686 423.7 1686 423.2 1685.5 423.2 1685.5 422.7 1685 422.7 1685 422.2 1684.5 422.2 1684.5 421.7 1684 421.7 1684 421.2 1683.5 421.2 1683.5 420.7 1683 420.7 1683 420.2 1682.5 420.2 1682.5 419.7 1682 419.7 1682 419.2 1681.5 419.2 1681.5 418.7 1681 418.7 1681 418.2 1680.5 418.2 1680.5 417.7 1680 417.7 1680 417.2 1679.5 417.2 1679.5 416.7 1679 416.7 1679 416.2 1678.5 416.2 1678.5 415.7 1678 415.7 1678 415.2 1677.5 415.2 1677.5 414.7 1677 414.7 1677 414.2 1676.5 414.2 1676.5 413.7 1676 413.7 1676 413.2 1675.5 413.2 1675.5 412.7 1675 412.7 1675 412.2 1674.5 412.2 1674.5 411.7 1674 411.7 1674 411.2 1673.5 411.2 1673.5 410.7 1673 410.7 1673 410.2 1672.5 410.2 1672.5 409.7 1672 409.7 1672 409.2 1671.5 409.2 1671.5 408.7 1671 408.7 1671 408.2 1670.5 408.2 1670.5 407.7 1670 407.7 1670 407.2 1669.5 407.2 1669.5 406.7 1669 406.7 1669 406.2 1668.5 406.2 1668.5 405.7 1668 405.7 1668 405.2 1667.5 405.2 1667.5 404.7 1667 404.7 1667 404.2 1666.5 404.2 1666.5 403.7 1666 403.7 1666 403.2 1665.5 403.2 1665.5 402.7 1665 402.7 1665 402.2 1664.5 402.2 1664.5 401.7 1664 401.7 1664 401.2 1663.5 401.2 1663.5 400.7 1663 400.7 1663 400.2 1662.5 400.2 1662.5 399.7 1662 399.7 1662 399.2 1661.5 399.2 1661.5 398.7 1661 398.7 1661 398.2 1660.5 398.2 1660.5 397.7 1660 397.7 1660 397.2 1659.5 397.2 1659.5 396.7 1659 396.7 1659 396.2 1658.5 396.2 1658.5 395.7 1658 395.7 1658 395.2 1657.5 395.2 1657.5 394.7 1657 394.7 1657 394.2 1656.5 394.2 1656.5 393.7 1656 393.7 1656 393.2 1655.5 393.2 1655.5 392.7 1655 392.7 1655 392.2 1654.5 392.2 1654.5 391.7 1654 391.7 1654 391.2 1653.5 391.2 1653.5 390.7 1653 390.7 1653 390.2 1652.5 390.2 1652.5 389.7 1652 389.7 1652 389.2 1651.5 389.2 1651.5 388.7 1651 388.7 1651 388.2 1650.5 388.2 1650.5 387.7 1650 387.7 1650 387.2 1649.5 387.2 1649.5 386.7 1649 386.7 1649 386.2 1648.5 386.2 1648.5 385.7 1648 385.7 1648 385.2 1647.5 385.2 1647.5 384.7 1647 384.7 1647 384.2 1646.5 384.2 1646.5 383.7 1646 383.7 1646 383.2 1645.5 383.2 1645.5 382.7 1645 382.7 1645 382.2 1644.5 382.2 1644.5 381.7 1644 381.7 1644 381.2 1643.5 381.2 1643.5 380.7 1643 380.7 1643 380.2 1642.5 380.2 1642.5 379.7 1642 379.7 1642 379.2 1641.5 379.2 1641.5 378.7 1641 378.7 1641 378.2 1640.5 378.2 1640.5 377.7 1640 377.7 1640 377.2 1639.5 377.2 1639.5 376.7 1639 376.7 1639 376.2 1638.5 376.2 1638.5 375.7 1638 375.7 1638 375.2 1637.5 375.2 1637.5 374.7 1637 374.7 1637 374.2 1636.5 374.2 1636.5 373.7 1636 373.7 1636 373.2 1635.5 373.2 1635.5 372.7 1635 372.7 1635 372.2 1634.5 372.2 1634.5 371.7 1634 371.7 1634 371.2 1633.5 371.2 1633.5 370.7 1633 370.7 1633 370.2 1632.5 370.2 1632.5 369.7 1632 369.7 1632 369.2 1631.5 369.2 1631.5 368.7 1631 368.7 1631 368.2 1630.5 368.2 1630.5 367.7 1630 367.7 1630 367.2 1629.5 367.2 1629.5 366.7 1629 366.7 1629 366.2 1628.5 366.2 1628.5 365.7 1628 365.7 1628 365.2 1627.5 365.2 1627.5 364.7 1627 364.7 1627 364.2 1626.5 364.2 1626.5 363.7 1626 363.7 1626 363.2 1625.5 363.2 1625.5 362.7 1625 362.7 1625 362.2 1624.5 362.2 1624.5 361.7 1624 361.7 1624 361.2 1623.5 361.2 1623.5 360.7 1623 360.7 1623 360.2 1622.5 360.2 1622.5 359.7 1622 359.7 1622 359.2 1621.5 359.2 1621.5 358.7 1621 358.7 1621 358.2 1620.5 358.2 1620.5 357.7 1620 357.7 1620 357.2 1619.5 357.2 1619.5 356.7 1619 356.7 1619 356.2 1618.5 356.2 1618.5 355.7 1618 355.7 1618 355.2 1617.5 355.2 1617.5 354.7 1617 354.7 1617 354.2 1616.5 354.2 1616.5 353.7 1616 353.7 1616 353.2 1615.5 353.2 1615.5 352.7 1615 352.7 1615 352.2 1614.5 352.2 1614.5 351.7 1614 351.7 1614 351.2 1613.5 351.2 1613.5 350.7 1613 350.7 1613 350.2 1612.5 350.2 1612.5 349.7 1612 349.7 1612 349.2 1611.5 349.2 1611.5 348.7 1611 348.7 1611 348.2 1610.5 348.2 1610.5 347.7 1610 347.7 1610 347.2 1609.5 347.2 1609.5 346.7 1609 346.7 1609 346.2 1608.5 346.2 1608.5 345.7 1608 345.7 1608 345.2 1607.5 345.2 1607.5 344.7 1607 344.7 1607 344.2 1606.5 344.2 1606.5 343.7 1606 343.7 1606 343.2 1605.5 343.2 1605.5 342.7 1605 342.7 1605 342.2 1604.5 342.2 1604.5 341.7 1604 341.7 1604 341.2 1603.5 341.2 1603.5 340.7 1603 340.7 1603 340.2 1602.5 340.2 1602.5 339.7 1602 339.7 1602 339.2 1601.5 339.2 1601.5 338.7 1601 338.7 1601 338.2 1600.5 338.2 1600.5 337.7 1600 337.7 1600 337.2 1599.5 337.2 1599.5 336.7 1599 336.7 1599 336.2 1598.5 336.2 1598.5 335.7 1598 335.7 1598 335.2 1597.5 335.2 1597.5 334.7 1597 334.7 1597 334.2 1596.5 334.2 1596.5 333.7 1596 333.7 1596 333.2 1595.5 333.2 1595.5 332.7 1595 332.7 1595 332.2 1594.5 332.2 1594.5 331.7 1594 331.7 1594 331.2 1593.5 331.2 1593.5 330.7 1593 330.7 1593 330.2 1592.5 330.2 1592.5 329.7 1592 329.7 1592 329.2 1591.5 329.2 1591.5 328.7 1591 328.7 1591 328.2 1590.5 328.2 1590.5 327.7 1590 327.7 1590 327.2 1589.5 327.2 1589.5 326.7 1589 326.7 1589 326.2 1588.5 326.2 1588.5 325.7 1588 325.7 1588 325.2 1587.5 325.2 1587.5 324.7 1587 324.7 1587 324.2 1586.5 324.2 1586.5 323.7 1586 323.7 1586 323.2 1585.5 323.2 1585.5 322.7 1585 322.7 1585 322.2 1584.5 322.2 1584.5 321.7 1584 321.7 1584 321.2 1583.5 321.2 1583.5 320.7 1583 320.7 1583 320.2 1582.5 320.2 1582.5 319.7 1582 319.7 1582 319.2 1581.5 319.2 1581.5 318.7 1581 318.7 1581 318.2 1580.5 318.2 1580.5 317.7 1580 317.7 1580 317.2 1579.5 317.2 1579.5 316.7 1579 316.7 1579 316.2 1578.5 316.2 1578.5 315.7 1578 315.7 1578 315.2 1577.5 315.2 1577.5 314.7 1577 314.7 1577 314.2 1576.5 314.2 1576.5 313.7 1576 313.7 1576 313.2 1575.5 313.2 1575.5 312.7 1575 312.7 1575 312.2 1574.5 312.2 1574.5 311.7 1574 311.7 1574 311.2 1573.5 311.2 1573.5 310.7 1573 310.7 1573 310.2 1572.5 310.2 1572.5 309.7 1572 309.7 1572 309.2 1571.5 309.2 1571.5 308.7 1571 308.7 1571 308.2 1570.5 308.2 1570.5 307.7 1570 307.7 1570 307.2 1569.5 307.2 1569.5 306.7 1569 306.7 1569 306.2 1568.5 306.2 1568.5 305.7 1568 305.7 1568 305.2 1567.5 305.2 1567.5 304.7 1567 304.7 1567 304.2 1566.5 304.2 1566.5 303.7 1566 303.7 1566 303.2 1565.5 303.2 1150.2 302.7 1150.2 302.7 1149.7 302.2 1149.7 302.2 1149.2 301.7 1149.2 301.7 1148.7 301.2 1148.7 301.2 1148.2 300.7 1148.2 300.7 1147.7 300.2 1147.7 300.2 1147.2 299.7 1147.2 299.7 1146.7 299.2 1146.7 299.2 1146.2 298.7 1146.2 298.7 1145.7 298.2 1145.7 298.2 1145.2 297.7 1145.2 297.7 1144.7 297.2 1144.7 297.2 1144.2 296.7 1144.2 296.7 1143.7 296.2 1143.7 296.2 1143.2 295.7 1143.2 295.7 1142.7 295.2 1142.7 295.2 1142.2 294.7 1142.2 294.7 1141.7 294.2 1141.7 294.2 1141.2 293.7 1141.2 293.7 1140.7 293.2 1140.7 293.2 1140.2 292.7 1140.2 292.7 1139.7 292.2 1139.7 292.2 1139.2 291.7 1139.2 291.7 1138.7 291.2 1138.7 291.2 1138.2 290.7 1138.2 290.7 1137.7 290.2 1137.7 290.2 1137.2 199.5 736.2 199.5 736.7 199 736.7 199 737.2 198.5 737.2 198.5 737.7 198 737.7 198 738.2 197.5 738.2 197.5 738.7 197 738.7 197 739.2 196.5 739.2 196.5 739.7 196 739.7 196 740.2 195.5 740.2 195.5 740.7 195 740.7 195 741.2 194.5 741.2 194.5 741.7 194 741.7 194 742.2 193.5 742.2 193.5 742.7 193 742.7 193 743.2 192.5 743.2 192.5 743.7 192 743.7 192 744.2 191.5 744.2 191.5 744.7 191 744.7 191 745.2 190.5 745.2 190.5 745.7 190 745.7 190 746.2 189.5 746.2 189.5 746.7 189 746.7 189 747.2 188.5 747.2 188.5 747.7 188 747.7 188 748.2 187.5 748.2 187.5 748.7 187 748.7 187 749.2 186.5 749.2 186.5 749.7 186 749.7 186 750.2 185.5 750.2 185.5 750.7 185 750.7 185 751.2 184.5 751.2 184.5 751.7 184 751.7 184 752.2 183.5 752.2 183.5 752.7 183 752.7 183 753.2 182.5 753.2 182.5 753.7 182 753.7 182 754.2 181.5 754.2 181.5 754.7 181 754.7 181 755.2 180.5 755.2 180.5 755.7 180 755.7 180 756.2 179.5 756.2 179.5 756.7 179 756.7 179 757.2 178.5 757.2 178.5 757.7 178 757.7 178 758.2 177.5 758.2 177.5 758.7 177 758.7 177 759.2 176.5 759.2 176.5 759.7 176 759.7 176 760.2 175.5 760.2 175.5 760.7 175 760.7 175 761.2 174.5 761.2 174.5 761.7 174 761.7 174 762.2 173.5 762.2 173.5 762.7 173 762.7 173 763.2 172.5 763.2 172.5 763.7 172 763.7 172 764.2 171.5 764.2 171.5 764.7 171 764.7 171 765.2 170.5 765.2 170.5 765.7 170 765.7 170 766.2 169.5 766.2 169.5 766.7 169 766.7 169 767.2 168.5 767.2 168.5 767.7 168 767.7 168 768.2 167.5 768.2 167.5 768.7 167 768.7 167 769.2 166.5 769.2 166.5 769.7 166 769.7 166 770.2 165.5 770.2 165.5 770.7 165 770.7 165 771.2 164.5 771.2 164.5 771.7 164 771.7 164 772.2 163.5 772.2 163.5 772.7 163 772.7 163 773.2 162.5 773.2 162.5 773.7 162 773.7 162 774.2 161.5 774.2 161.5 774.7 161 774.7 161 775.2 160.5 775.2 160.5 775.7 160 775.7 160 776.2 159.5 776.2 159.5 776.7 159 776.7 159 777.2 158.5 777.2 158.5 777.7 158 777.7 158 778.2 157.5 778.2 157.5 778.7 157 778.7 157 779.2 156.5 779.2 156.5 779.7 156 779.7 156 780.2 155.5 780.2 155.5 780.7 155 780.7 155 781.2 154.5 781.2 154.5 781.7 154 781.7 154 782.2 153.5 782.2 153.5 782.7 153 782.7 153 783.2 152.5 783.2 152.5 783.7 152 783.7 152 784.2 151.5 784.2 151.5 784.7 151 784.7 151 785.2 150.5 785.2 150.5 785.7 150 785.7 150 786.2 149.5 786.2 149.5 786.7 149 786.7 149 787.2 148.5 787.2 148.5 787.7 148 787.7 148 788.2 147.5 788.2 147.5 788.7 147 788.7 147 789.2 146.5 789.2 146.5 789.7 146 789.7 146 790.2 145.5 790.2 145.5 790.7 145 790.7 145 791.2 144.5 791.2 144.5 791.7 144 791.7 144 792.2 143.5 792.2 143.5 792.7 143 792.7 143 793.2 142.5 793.2 142.5 793.7 142 793.7 142 794.2 141.5 794.2 141.5 794.7 141 794.7 141 795.2 140.5 795.2 140.5 795.7 140 795.7 140 796.2 139.5 796.2 139.5 796.7 139 796.7 139 797.2 138.5 797.2 138.5 797.7 138 797.7 138 798.2 137.5 798.2 137.5 798.7 137 798.7 137 799.2 136.5 799.2 136.5 799.7 136 799.7 136 800.2 135.5 800.2 135.5 800.7 135 800.7 135 801.2 134.5 801.2 134.5 801.7 134 801.7 134 802.2 133.5 802.2 133.5 802.7 133 802.7 133 803.2 132.5 803.2 132.5 803.7 132 803.7 132 804.2 131.5 804.2 131.5 804.7 131 804.7 131 805.2 130.5 805.2 130.5 805.7 130 805.7 130 806.2 129.5 806.2 129.5 806.7 129 806.7 129 807.2 128.5 807.2 128.5 807.7 128 807.7 128 808.2 127.5 808.2 127.5 808.7 127 808.7 127 809.2 126.5 809.2 126.5 809.7 126 809.7 126 810.2 125.5 810.2 125.5 810.7 125 810.7 125 811.2 124.5 811.2 124.5 811.7 124 811.7 124 812.2 123.5 812.2 123.5 812.7 123 812.7 123 813.2 122.5 813.2 122.5 813.7 122 813.7 122 814.2 121.5 814.2 121.5 814.7 121 814.7 121 815.2 120.5 815.2 120.5 815.7 120 815.7 120 816.2 119.5 816.2 119.5 816.7 119 816.7 119 817.2 118.5 817.2 118.5 817.7 118 817.7 118 818.2 117.5 818.2 117.5 818.7 117 818.7 117 819.2 116.5 819.2 116.5 819.7 116 819.7 116 820.2 115.5 820.2 115.5 820.7 115 820.7 115 821.2 114.5 821.2 114.5 821.7 114 821.7 114 822.2 113.5 822.2 113.5 822.7 113 822.7 113 823.2 112.5 823.2 112.5 823.7 112 823.7 112 824.2 111.5 824.2 111.5 824.7 111 824.7 111 825.2 110.5 825.2 110.5 825.7 110 825.7 110 826.2 109.5 826.2 109.5 826.7 109 826.7 109 827.2 108.5 827.2 108.5 827.7 108 827.7 108 828.2 107.5 828.2 107.5 828.7 107 828.7 107 829.2 106.5 829.2 106.5 829.7 106 829.7 106 830.2 105.5 830.2 105.5 830.7 105 830.7 105 831.2 104.5 831.2 104.5 831.7 104 831.7 104 832.2 103.5 832.2 103.5 832.7 103 832.7 103 833.2 102.5 833.2 102.5 833.7 102 833.7 102 834.2 101.5 834.2 101.5 834.7 101 834.7 101 835.2 100.5 835.2 100.5 835.7 100 835.7 100 836.2 99.5 836.2 99.5 836.7 99 836.7 99 837.2 98.5 837.2 98.5 837.7 98 837.7 98 838.2 97.5 838.2 97.5 838.7 97 838.7 97 839.2 96.5 839.2 96.5 839.7 96 839.7 96 840.2 95.5 840.2 95.5 840.7 95 840.7 95 841.2 94.5 841.2 94.5 841.7 94 841.7 94 842.2 93.5 842.2 93.5 842.7 93 842.7 93 843.2 92.5 843.2 92.5 843.7 92 843.7 92 844.2 91.5 844.2 91.5 844.7 91 844.7 91 845.2 90.5 845.2 90.5 845.7 90 845.7 90 846.2 89.5 846.2 89.5 846.7 89 846.7 89 847.2 88.5 847.2 88.5 847.7 88 847.7 88 848.2 87.5 848.2 87.5 848.7 87 848.7 87 849.2 86.5 849.2 86.5 849.7 86 849.7 86 850.2 85.5 850.2 85.5 850.7 85 850.7 85 851.2 84.5 851.2 84.5 851.7 84 851.7 84 852.2 83.5 852.2 83.5 852.7 83 852.7 83 853.2 82.5 853.2 82.5 853.7 82 853.7 82 854.2 81.5 854.2 81.5 854.7 81 854.7 81 855.2 80.5 855.2 80.5 855.7 80 855.7 80 856.2 79.5 856.2 79.5 856.7 79 856.7 79 857.2 78.5 857.2 78.5 857.7 78 857.7 78 858.2 77.5 858.2 77.5 858.7 77 858.7 77 859.2 76.5 859.2 76.5 859.7 76 859.7 76 860.2 75.5 860.2 75.5 860.7 75 860.7 75 861.2 74.5 861.2 74.5 861.7 74 861.7 74 862.2 73.5 862.2 73.5 862.7 73 862.7 73 863.2 72.5 863.2 72.5 863.7 72 863.7 72 864.2 71.5 864.2 71.5 864.7 71 864.7 71 865.2 70.5 865.2 70.5 865.7 70 865.7 70 866.2 69.5 866.2 69.5 866.7 69 866.7 69 867.2 68.5 867.2 68.5 867.7 68 867.7 68 868.2 67.5 868.2 67.5 868.7 67 868.7 67 869.2 66.5 869.2 66.5 869.7 66 869.7 66 870.2 65.5 870.2 65.5 870.7 65 870.7 65 871.2 64.5 871.2 64.5 871.7 64 871.7 64 872.2 63.5 872.2 63.5 872.7 63 872.7 63 873.2 62.5 873.2 62.5 873.7 62 873.7 62 874.2 61.5 874.2 61.5 874.7 61 874.7 61 875.2 60.5 875.2 60.5 875.7 60 875.7 60 876.2 59.5 876.2 59.5 876.7 59 876.7 59 877.2 58.5 877.2 58.5 877.7 58 877.7 58 878.2 57.5 878.2 57.5 878.7 57 878.7 57 879.2 56.5 879.2 56.5 879.7 56 879.7 56 880.2 55.5 880.2 55.5 880.7 55 880.7 55 881.2 54.5 881.2 54.5 881.7 54 881.7 54 882.2 53.5 882.2 53.5 882.7 53 882.7 53 883.2 52.5 883.2 52.5 883.7 52 883.7 52 884.2 51.5 884.2 51.5 884.7 51 884.7 51 885.2 50.5 885.2 50.5 885.7 50 885.7 50 886.2 49.5 886.2 49.5 886.7 49 886.7 49 887.2 48.5 887.2 48.5 887.7 48 887.7 48 888.2 47.5 888.2 47.5 888.7 47 888.7 47 889.2 46.5 889.2 46.5 889.7 46 889.7 46 890.2 45.5 890.2 45.5 890.7 45 890.7 45 891.2 44.5 891.2 44.5 891.7 44 891.7 44 892.2 43.5 892.2 43.5 892.7 43 892.7 43 893.2 42.5 893.2 42.5 893.7 42 893.7 42 894.2 41.5 894.2 41.5 894.7 41 894.7 41 895.2 40.5 895.2 40.5 895.7 40 895.7 40 896.2 39.5 896.2 39.5 896.7 39 896.7 39 897.2 38.5 897.2 38.5 897.7 38 897.7 38 898.2 37.5 898.2 37.5 898.7 37 898.7 37 899.2 36.5 899.2 36.5 899.7 36 899.7 36 900.2 35.5 900.2 35.5 900.7 35 900.7 35 901.2 34.5 901.2 34.5 901.7 34 901.7 34 902.2 33.5 902.2 33.5 902.7 33 902.7 33 903.2 32.5 903.2 32.5 903.7 32 903.7 32 904.2 31.5 904.2 31.5 904.7 31 904.7 31 905.2 30.5 905.2 30.5 905.7 30 905.7 30 906.2 29.5 906.2 29.5 906.7 29 906.7 29 907.2 28.5 907.2 28.5 907.7 28 907.7 28 908.2 27.5 908.2 27.5 908.7 27 908.7 27 909.2 26.5 909.2 26.5 909.7 26 909.7 26 910.2 25.5 910.2 25.5 910.7 25 910.7 25 911.2 24.5 911.2 24.5 911.7 24 911.7 24 912.2 23.5 912.2 23.5 912.7 23 912.7 23 913.2 22.5 913.2 22.5 913.7 22 913.7 22 914.2 21.5 914.2 21.5 914.7 21 914.7 21 915.2 20.5 915.2 20.5 915.7 20 915.7 20 916.2 19.5 916.2 19.5 916.7 19 916.7 19 917.2 18.5 917.2 18.5 917.7 18 917.7 18 918.2 17.5 918.2 17.5 918.7 17 918.7 17 919.2 16.5 919.2 16.5 919.7 16 919.7 16 920.2 15.5 920.2 15.5 920.7 15 920.7 15 921.2 14.5 921.2 14.5 921.7 14 921.7 14 922.2 13.5 922.2 13.5 922.7 13 922.7 13 923.2 12.5 923.2 12.5 923.7 12 923.7 12 924.2 11.5 924.2 11.5 924.7 11 924.7 11 925.2 10.5 925.2 10.5 925.7 10 925.7 10 926.2 9.5 926.2 9.5 926.7 9 926.7 9 927.2 8.5 927.2 8.5 927.7 8 927.7 8 928.2 7.5 928.2 7.5 928.7 7 928.7 7 929.2 6.5 929.2 6.5 929.7 6 929.7 6 930.2 5.5 930.2 5.5 930.7 5 930.7 5 931.2 4.5 931.2 4.5 931.7 4 931.7 4 932.2 3.5 932.2 3.5 932.7 3 932.7 3 933.2 2.5 933.2 2.5 933.7 2 933.7 2 934.2 1.5 934.2 1.5 934.7 1 934.7 1 935.2 0.5 935.2 0.5 935.7 0 935.7 0 936.2 0 936.7 0 937.2 0 937.7 0 938.2 0 938.7 0 939.2 0 939.7 0 940.2 0 940.7 0 941.2 0 941.7 0 942.2 0 942.7 0 943.2 0 943.7 0 944.2 0 944.7 0 945.2 0 945.7 0 946.2 0 946.7 0 947.2 0 947.7 0 948.2 0 948.7 0 949.2 0 949.7 0 950.2 0 950.7 0 951.2 0 951.7 0 952.2 0 952.7 0 953.2 0 953.7 0 954.2 0 954.7 0 955.2 0 955.7 0 956.2 0 956.7 0 957.2 0 957.7 0 958.2 0 958.7 0 959.2 0 959.7 0 960.2 0 960.7 0 961.2 0 961.7 0 962.2 0 962.7 0 963.2 0 963.7 0 964.2 0 964.7 0 965.2 0 965.7 0 966.2 0 966.7 0 967.2 0 967.7 0 968.2 0 968.7 0 969.2 0 969.7 0 970.2 0 970.7 0 971.2 0 971.7 0 972.2 0 972.7 0 973.2 0 973.7 0 974.2 0 974.7 0 975.2 0 975.7 0 976.2 0 976.7 0 977.2 0 977.7 0 978.2 0 978.7 0 979.2 0 979.7 0 980.2 0 980.7 0 981.2 0 981.7 0 982.2 0 982.7 0 983.2 0 983.7 0 984.2 0 984.7 0 985.2 0 985.7 0 986.2 0 986.7 0 987.2 0 987.7 0 988.2 0 988.7 0 989.2 0 989.7 0 990.2 0 990.7 0 991.2 0 991.7 0 992.2 0 992.7 0 993.2 0 993.7 0 994.2 0 994.7 0 995.2 0 995.7 0 996.2 0 996.7 0 997.2 0 997.7 0 998.2 0 998.7 0 999.2 0 999.7 0 1000.2 0 1000.7 0 1001.2 0 1001.7 0 1002.2 0 1002.7 0 1003.2 0 1003.7 0 1004.2 0 1004.7 0 1005.2 0 1005.7 0 1006.2 0 1006.7 0 1007.2 0 1007.7 0 1008.2 0 1008.7 0 1009.2 0 1009.7 0 1010.2 0 1010.7 0 1011.2 0 1011.7 0 1012.2 0 1012.7 0 1013.2 0 1013.7 0 1014.2 0 1014.7 0 1015.2 0 1015.7 0 1016.2 0 1016.7 0 1017.2 0 1017.7 0 1018.2 0 1018.7 0 1019.2 0 1019.7 0 1020.2 0 1020.7 0 1021.2 0 1021.7 0 1022.2 0 1022.7 0 1023.2 0 1023.7 0 1024.2 0 1024.7 0 1025.2 0 1025.7 0 1026.2 0 1026.7 0 1027.2 0 1027.7 0 1028.2 0 1028.7 0 1029.2 0 1029.7 0 1030.2 0 1030.7 0 1031.2 0 1031.7 0 1032.2 0 1032.7 0 1033.2 0 1033.7 0 1034.2 0 1034.7 0 1035.2 0 1035.7 0 1036.2 0 1036.7 0 1037.2 0 1037.7 0 1038.2 0 1038.7 0 1039.2 0 1039.7 0 1040.2 0 1040.7 0 1041.2 0 1041.7 0 1042.2 0 1042.7 0 1043.2 0 1043.7 0 1044.2 0 1044.7 0 1045.2 0 1045.7 0 1046.2 0 1046.7 0 1047.2 0 1047.7 0 1048.2 0 1048.7 0 1049.2 0 1049.7 0 1050.2 0 1050.7 0 1051.2 0 1051.7 0 1052.2 0 1052.7 0 1053.2 0 1053.7 0 1054.2 0 1054.7 0 1055.2 0 1055.7 0 1056.2 0 1056.7 0 1057.2 0 1057.7 0 1058.2 0 1058.7 0 1059.2 0 1059.7 0 1060.2 0 1060.7 0 1061.2 0 1061.7 0 1062.2 0 1062.7 0 1063.2 0 1063.7 0 1064.2 0 1064.7 0 1065.2 0 1065.7 0 1066.2 0 1066.7 0 1067.2 0 1067.7 0 1068.2 0 1068.7 0 1069.2 0 1069.7 0 1070.2 0 1070.7 0 1071.2 0 1071.7 0 1072.2 0 1072.7 0 1073.2 0 1073.7 0 1074.2 0 1074.7 0 1075.2 0 1075.7 0 1076.2 0 1076.7 0 1077.2 0 1077.7 0 1078.2 0 1078.7 0 1079.2 0 1079.7 0 1080.2 0 1080.7 0 1081.2 0 1081.7 0 1082.2 0 1082.7 0 1083.2 0 1083.7 0 1084.2 0 1084.7 0 1085.2 0 1085.7 0 1086.2 0 1086.7 0 1087.2 0 1087.7 0 1088.2 0 1088.7 0 1089.2 0 1089.7 0 1090.2 0 1090.7 0 1091.2 0 1091.7 0 1092.2 0 1092.7 0 1093.2 0 1093.7 0 1094.2 0 1094.7 0 1095.2 0 1095.7 0 1096.2 0 1096.7 0 1097.2 0 1097.7 0 1098.2 0 1098.7 0 1099.2 0 1099.7 0 1100.2 0 1100.7 0 1101.2 0 1101.7 0 1102.2 0 1102.7 0 1103.2 0 1103.7 0 1104.2 0 1104.7 0 1105.2 0 1105.7 0 1106.2 0 1106.7 0 1107.2 0 1107.7 0 1108.2 0 1108.7 0 1109.2 0 1109.7 0 1110.2 0 1110.7 0 1111.2 0 1111.7 0 1112.2 0 1112.7 0 1113.2 0 1113.7 0 1114.2 0 1114.7 0 1115.2 0 1115.7 0 1116.2 0 1116.7 0 1117.2 0 1117.7 0 1118.2 0 1118.7 0 1119.2 0 1119.7 0 1120.2 0 1120.7 0 1121.2 0 1121.7 0 1122.2 0 1122.7 0 1123.2 0 1123.7 0 1124.2 0 1124.7 0 1125.2 0 1125.7 0 1126.2 0 1126.7 0 1127.2 0 1127.7 0 1128.2 0 1128.7 0 1129.2 0 1129.7 0 1130.2 0 1130.7 0 1131.2 0 1131.7 0 1132.2 0 1132.7 0 1133.2 0 1133.7 0 1134.2 0 1134.7 0 1135.2 0 1135.7 0 1136.2 0 1136.7 0 1137.2 0 1137.7 0 1138.2 0 1138.7 0 1139.2 0 1139.7 0 1140.2 0 1140.7 0 1141.2 0 1141.7 0 1142.2 0 1142.7 0 1143.2 0 1143.7 0 1144.2 0 1144.7 0 1145.2 0 1145.7 0 1146.2 0 1146.7 0 1147.2 0 1147.7 0 1148.2 0 1148.7 0 1149.2 0 1149.7 0 1150.2 0 1150.7 0 1151.2 0 1151.7 0 1152.2 0 1152.7 0 1153.2 0 1153.7 0 1154.2 0 1154.7 0 1155.2 0 1155.7 0 1156.2 0 1156.7 0 1157.2 0 1157.7 0 1158.2 0 1158.7 0 1159.2 0 1159.7 0 1160.2 0 1160.7 0 1161.2 0 1161.7 0 1162.2 0 1162.7 0 1163.2 0 1163.7 0 1164.2 0 1164.7 0 1165.2 0 1165.7 0 1166.2 0 1166.7 0 1167.2 0 1167.7 0 1168.2 0 1168.7 0 1169.2 0 1169.7 0 1170.2 0 1170.7 0 1171.2 0 1171.7 0 1172.2 0 1172.7 0 1173.2 0 1173.7 0 1174.2 0 1174.7 0 1175.2 0 1175.7 0 1176.2 0 1176.7 0 1177.2 0 1177.7 0 1178.2 0 1178.7 0 1179.2 0 1179.7 0 1180.2 0 1180.7 0 1181.2 0 1181.7 0 1182.2 0 1182.7 0 1183.2 0 1183.7 0 1184.2 0 1184.7 0 1185.2 0 1185.7 0 1186.2 0 1186.7 0 1187.2 0 1187.7 0 1188.2 0 1188.7 0 1189.2 0 1189.7 0 1190.2 0 1190.7 0 1191.2 0 1191.7 0 1192.2 0 1192.7 0 1193.2 0 1193.7 0 1194.2 0 1194.7 0 1195.2 0 1195.7 0 1196.2 0 1196.7 0 1197.2 0 1197.7 0 1198.2 0 1198.7 0 1199.2 0 1199.7 0 1200.2 0 1200.7 0 1201.2 0 1201.7 0 1202.2 0 1202.7 0 1203.2 0 1203.7 0 1204.2 0 1204.7 0 1205.2 0 1205.7 0 1206.2 0 1206.7 0 1207.2 0 1207.7 0 1208.2 0 1208.7 0 1209.2 0 1209.7 0 1210.2 0 1210.7 0 1211.2 0 1211.7 0 1212.2 0 1212.7 0 1213.2 0 1213.7 0 1214.2 0 1214.7 0 1215.2 0 1215.7 0 1216.2 0 1216.7 0 1217.2 0 1217.7 0 1218.2 0 1218.7 0 1219.2 0 1219.7 0 1220.2 0 1220.7 0 1221.2 0 1221.7 0 1222.2 0 1222.7 0 1223.2 0 1223.7 0 1224.2 0 1224.7 0 1225.2 0 1225.7 0 1226.2 0 1226.7 0 1227.2 0 1227.7 0 1228.2 0 1228.7 0 1229.2 0 1229.7 0 1230.2 0 1230.7 0 1231.2 0 1231.7 0 1232.2 0 1232.7 0 1233.2 0 1233.7 0 1234.2 0 1234.7 0 1235.2 0 1235.7 0 1236.2 0 1236.7 0 1237.2 0 1237.7 0 1238.2 0 1238.7 0 1239.2 0 1239.7 0 1240.2 0 1240.7 0 1241.2 0 1241.7 0 1242.2 0 1242.7 0 1243.2 0 1243.7 0 1244.2 0 1244.7 0 1245.2 0 1245.7 0 1246.2 0 1246.7 0 1247.2 0 1247.7 0 1248.2 0 1248.7 0 1249.2 0 1249.7 0 1250.2 0 1250.7 0 1251.2 0 1251.7 0 1252.2 0 1252.7 0 1253.2 0 1253.7 0 1254.2 0 1254.7 0 1255.2 0 1255.7 0 1256.2 0 1256.7 0 1257.2 0 1257.7 0 1258.2 0 1258.7 0 1259.2 0 1259.7 0 1260.2 0 1260.7 0 1261.2 0 1261.7 0 1262.2 0 1262.7 0 1263.2 0 1263.7 0 1264.2 0 1264.7 0 1265.2 0 1265.7 0 1266.2 0 1266.7 0 1267.2 0 1267.7 0 1268.2 0 1268.7 0 1269.2 0 1269.7 0 1270.2 0 1270.7 0 1271.2 0 1271.7 0 1272.2 0 1272.7 0 1273.2 0 1273.7 0 1274.2 0 1274.7 0 1275.2 0 1275.7 0 1276.2 0 1276.7 0 1277.2 0 1277.7 0 1278.2 0 1278.7 0 1279.2 0 1279.7 0 1280.2 0 1280.7 0 1281.2 0 1281.7 0 1282.2 0 1282.7 0 1283.2 0 1283.7 0 1284.2 0 1284.7 0 1285.2 0 1285.7 0 1286.2 0 1286.7 0 1287.2 0 1287.7 0 1288.2 0 1288.7 0 1289.2 0 1289.7 0 1290.2 0 1290.7 0 1291.2 0 1291.7 0 1292.2 0 1292.7 0 1293.2 0 1293.7 0 1294.2 0 1294.7 0 1295.2 0 1295.7 0 1296.2 0 1296.7 0 1297.2 0 1297.7 0 1298.2 0 1298.7 0 1299.2 0 1299.7 0 1300.2 0 1300.7 0 1301.2 0 1301.7 0 1302.2 0 1302.7 0 1303.2 0 1303.7 0 1304.2 0 1304.7 0 1305.2 0 1305.7 0 1306.2 0 1306.7 0 1307.2 0 1307.7 0 1308.2 0 1308.7 0 1309.2 0 1309.7 0 1310.2 0 1310.7 0 1311.2 0 1311.7 0 1312.2 0 1312.7 0 1313.2 0 1313.7 0 1314.2 0 1314.7 0 1315.2 0 1315.7 0 1316.2 0 1316.7 0 1317.2 0 1317.7 0 1318.2 0 1318.7 0 1319.2 0 1319.7 0 1320.2 0 1320.7 0 1321.2 0 1321.7 0 1322.2 0 1322.7 0 1323.2 0 1323.7 0 1324.2 0 1324.7 0 1325.2 0 1325.7 0 1326.2 0 1326.7 0 1327.2 0 1327.7 0 1328.2 0 1328.7 0 1329.2 0 1329.7 0 1330.2 0 1330.7 0 1331.2 0 1331.7 0 1332.2 0 1332.7 0 1333.2 0 1333.7 0 1334.2 0 1334.7 0 1335.2 0 1335.7 0 1336.2 0 1336.7 0 1337.2 0 1337.7 0 1338.2 0 1338.7 0 1339.2 0 1339.7 0 1340.2 0 1340.7 0 1341.2 0 1341.7 0 1342.2 0 1342.7 0 1343.2 0 1343.7 0 1344.2 0 1344.7 0 1345.2 0 1345.7 0 1346.2 0 1346.7 0 1347.2 0 1347.7 0 1348.2 0 1348.7 0 1349.2 0 1349.7 0 1350.2 0 1350.7 0 1351.2 0 1351.7 0 1352.2 0 1352.7 0 1353.2 0 1353.7 0 1354.2 0 1354.7 0 1355.2 0 1355.7 0 1356.2 0 1356.7 0 1357.2 0 1357.7 0 1358.2 0 1358.7 0 1359.2 0 1359.7 0 1360.2 0 1360.7 0 1361.2 0 1361.7 0 1362.2 0 1362.7 0 1363.2 0 1363.7 0 1364.2 0 1364.7 0 1365.2 0 1365.7 0 1366.2 0 1366.7 0 1367.2 0 1367.7 0 1368.2 0 1368.7 0 1369.2 0 1369.7 0 1370.2 0 1370.7 0 1371.2 0 1371.7 0 1372.2 0 1372.7 0 1373.2 0 1373.7 0 1374.2 0 1374.7 0 1375.2 0 1375.7 0 1376.2 0 1376.7 0 1377.2 0 1377.7 0 1378.2 0 1378.7 0 1379.2 0 1379.7 0 1380.2 0 1380.7 0 1381.2 0 1381.7 0 1382.2 0 1382.7 0 1383.2 0 1383.7 0 1384.2 0 1384.7 0 1385.2 0 1385.7 0 1386.2 0 1386.7 0 1387.2 0 1387.7 0 1388.2 0 1388.7 0 1389.2 0 1389.7 0 1390.2 0 1390.7 0 1391.2 0 1391.7 0 1392.2 0 1392.7 0 1393.2 0 1393.7 0 1394.2 0 1394.7 0 1395.2 0 1395.7 0 1396.2 0 1396.7 0 1397.2 0 1397.7 0 1398.2 0 1398.7 0 1399.2 0 1399.7 0 1400.2 0 1400.7 0 1401.2 0 1401.7 0 1402.2 0 1402.7 0 1403.2 0 1403.7 0 1404.2 0 1404.7 0 1405.2 0 1405.7 0 1406.2 0 1406.7 0 1407.2 0 1407.7 0 1408.2 0 1408.7 0 1409.2 0 1409.7 0 1410.2 0 1410.7 0 1411.2 0 1411.7 0 1412.2 0 1412.7 0 1413.2 0 1413.7 0 1414.2 0 1414.7 0 1415.2 0 1415.7 0 1416.2 0 1416.7 0 1417.2 0 1417.7 0 1418.2 0 1418.7 0 1419.2 0 1419.7 0 1420.2 0 1420.7 0 1421.2 0 1421.7 0 1422.2 0 1422.7 0 1423.2 0 1423.7 0 1424.2 0 1424.7 0 1425.2 0 1425.7 0 1426.2 0 1426.7 0 1427.2 0 1427.7 0 1428.2 0 1428.7 0 1429.2 0 1429.7 0 1430.2 0 1430.7 0 1431.2 0 1431.7 0 1432.2 0 1432.7 0 1433.2 0 1433.7 0 1434.2 0 1434.7 0 1435.2 0 1435.7 0 1436.2 0 1436.7 0 1437.2 0 1437.7 0 1438.2 0 1438.7 0 1439.2 0 1439.7 0 1440.2 0 1440.7 0 1441.2 0 1441.7 0 1442.2 0 1442.7 0 1443.2 0 1443.7 0 1444.2 0 1444.7 0 1445.2 0 1445.7 0 1446.2 0 1446.7 0 1447.2 0 1447.7 0 1448.2 0 1448.7 0 1449.2 0 1449.7 0 1450.2 0 1450.7 0 1451.2 0 1451.7 0 1452.2 0 1452.7 0 1453.2 0 1453.7 0 1454.2 0 1454.7 0 1455.2 0 1455.7 0 1456.2 0 1456.7 0 1457.2 0 1457.7 0 1458.2 0 1458.7 0 1459.2 0 1459.7 0 1460.2 0 1460.7 0 1461.2 0 1461.7 0 1462.2 0 1462.7 0 1463.2 0 1463.7 0 1464.2 0 1464.7 0 1465.2 0 1465.7 0 1466.2 0 1466.7 0 1467.2 0 1467.7 0 1468.2 0 1468.7 0 1469.2 0 1469.7 0 1470.2 0 1470.7 0 1471.2 0 1471.7 0 1472.2 0 1472.7 0 1473.2 0 1473.7 0 1474.2 0 1474.7 0 1475.2 0 1475.7 0 1476.2 0 1476.7 0 1477.2 0 1477.7 0 1478.2 0 1478.7 0 1479.2 0 1479.7 0 1480.2 0 1480.7 0 1481.2 0 1481.7 0 1482.2 0 1482.7 0 1483.2 0 1483.7 0 1484.2 0 1484.7 0 1485.2 0 1485.7 0 1486.2 0 1486.7 0 1487.2 0 1487.7 0 1488.2 0 1488.7 0 1489.2 0 1489.7 0 1490.2 0 1490.7 0 1491.2 0 1491.7 0 1492.2 0 1492.7 0 1493.2 0 1493.7 0 1494.2 0 1494.7 0 1495.2 0 1495.7 0 1496.2 0 1496.7 0 1497.2 0 1497.7 0 1498.2 0 1498.7 0 1499.2 0 1499.7 0 1500.2 0 1500.7 0 1501.2 0 1501.7 0 1502.2 0 1502.7 0 1503.2 0 1503.7 0 1504.2 0 1504.7 0 1505.2 0 1505.7 0 1506.2 0 1506.7 0 1507.2 0 1507.7 0 1508.2 0 1508.7 0 1509.2 0 1509.7 0 1510.2 0 1510.7 0 1511.2 0 1511.7 0 1512.2 0 1512.7 0 1513.2 0 1513.7 0 1514.2 0 1514.7 0 1515.2 0 1515.7 0 1516.2 0 1516.7 0 1517.2 0 1517.7 0 1518.2 0 1518.7 0 1519.2 0 1519.7 0 1520.2 0 1520.7 0 1521.2 0 1521.7 0 1522.2 0 1522.7 0 1523.2 0 1523.7 0 1524.2 0 1524.7 0 1525.2 0 1525.7 0 1526.2 0 1526.7 0 1527.2 0 1527.7 0 1528.2 0 1528.7 0 1529.2 0 1529.7 0 1530.2 0 1530.7 0 1531.2 0 1531.7 0 1532.2 0 1532.7 0 1533.2 0 1533.7 0 1534.2 0 1534.7 0 1535.2 0 1535.7 0 1536.2 0 1536.7 0 1537.2 0 1537.7 0 1538.2 0 1538.7 0 1539.2 0 1539.7 0 1540.2 0 1540.7 0 1541.2 0 1541.7 0 1542.2 0 1542.7 0 1543.2 0 1L1543.2 0 1543.7 0 1544.2 0 1544.7 0 1545.2 0 1545.7 0 1546.2 0 1546.7 0 1547.2 0 1547.7 0 1548.2 0 1548.7 0 1549.2 0 1549.7 0 1550.2 0 1550.7 0 1551.2 0 1551.7 0 1552.2 0 1552.7 0 1553.2 0 1553.7 0 1554.2 0 1554.7 0 1555.2 0 1555.7 0 1556.2 0 1556.7 0 1557.2 0 1557.7 0 1558.2 0 1558.7 0 1559.2 0 1559.7 0 1560.2 0 1560.7 0 1561.2 0 1561.7 0 1562.2 0 1562.7 0 1563.2 0 1563.7 0 1564.2 0 1564.7 0 1565.2 0 1565.7 0 1566.2 0 1566.7 0 1567.2 0 1567.7 0 1568.2 0 1568.7 0 1569.2 0 1569.7 0 1570.2 0 1570.7 0 1571.2 0 1571.7 0 1572.2 0 1572.7 0 1573.2 0 1573.7 0 1574.2 0 1574.7 0 1575.2 0 1575.7 0 1576.2 0 1576.7 0 1577.2 0 1577.7 0 1578.2 0 1578.7 0 1579.2 0 1579.7 0 1580.2 0 1580.7 0 1581.2 0 1581.7 0 1582.2 0 1582.7 0 1583.2 0 1583.7 0 1584.2 0 1584.7 0 1585.2 0 1585.7 0 1586.2 0 1586.7 0 1587.2 0 1587.7 0 1588.2 0 1588.7 0 1589.2 0 1589.7 0 1590.2 0 1590.7 0 1591.2 0 1591.7 0 1592.2 0 1592.7 0 1593.2 0 1593.7 0 1594.2 0 1594.7 0 1595.2 0 1595.7 0 1596.2 0 1596.7 0 1597.2 0 1597.7 0 1598.2 0 1598.7 0 1599.2 0 1599.7 0 1600.2 0 1600.7 0 1601.2 0 1601.7 0 1602.2 0 1602.7 0 1603.2 0 1603.7 0 1604.2 0 1604.7 0 1605.2 0 1605.7 0 1606.2 0 1606.7 0 1607.2 0 1607.7 0 1608.2 0 1608.7 0 1609.2 0 1609.7 0 1610.2 0 1610.7 0 1611.2 0 1611.7 0 1612.2 0 1612.7 0 1613.2 0 1613.7 0 1614.2 0 1614.7 0 1615.2 0 1615.7 0 1616.2 0 1616.7 0 1617.2 0 1617.7 0 1618.2 0 1618.7 0 1619.2 0 1619.7 0 1620.2 0 1620.7 0 1621.2 0 1621.7 0 1622.2 0 1622.7 0 1623.2 0 1623.7 0 1624.2 0 1624.7 0 1625.2 0 1625.7 0 1626.2 0 1626.7 0 1627.2 0 1627.7 0 1628.2 0 1628.7 0 1629.2 0 1629.7 0 1630.2 0 1630.7 0 1631.2 0 1631.7 0 1632.2 0 1632.7 0 1633.2 0 1633.7 0 1634.2 0 1634.7 0 1635.2 0 1635.7 0 1636.2 0 1636.7 0 1637.2 0 1637.7 0 1638.2 0 1638.7 0 1639.2 0 1639.7 0 1640.2 0 1640.7 0 1641.2 0 1641.7 0 1642.2 0 1642.7 0 1643.2 0 1643.7 0 1644.2 0 1644.7 0 1645.2 0 1645.7 0 1646.2 0 1646.7 0 1647.2 0 1647.7 0 1648.2 0 1648.7 0 1649.2 0 1649.7 0 1650.2 0 1650.7 0 1651.2 0 1651.7 0 1652.2 0 1652.7 0 1653.2 0 1653.7 0 1654.2 0 1654.7 0 1655.2 0 1655.7 0 1656.2 0 1656.7 0 1657.2 0 1657.7 0 1658.2 0 1658.7 0 1659.2 0 1659.7 0 1660.2 0 1660.7 0 1661.2 0 1661.7 0 1662.2 0 1662.7 0 1663.2 0 1663.7 0 1664.2 0 1664.7 0 1665.2 0 1665.7 0 1666.2 0 1666.7 0 1667.2 0 1667.7 0 1668.2 0 1668.7 0 1669.2 0 1669.7 0 1670.2 0 1670.7 0 1671.2 0 1671.7 0 1672.2 0 1672.7 0 1673.2 0 1673.7 0 1674.2 0 1674.7 0 1675.2 0 1675.7 0 1676.2 0 1676.7 0 1677.2 0 1677.7 0 1678.2 0 1678.7 0 1679.2 0 1679.7 0 1680.2 0 1680.7 0 1681.2 0 1681.7 0 1682.2 0 1682.7 0 1683.2 0 1683.7 0 1684.2 0 1684.7 0 1685.2 0 1685.7 0 1686.2 0 1686.7 0 1687.2 0 1687.7 0 1688.2 0 1688.7 0 1689.2 0 1689.7 0 1690.2 0 1690.7 0 1691.2 0 1691.7 0 1692.2 0 1692.7 0 1693.2 0 1693.7 0 1694.2 0 1694.7 0 1695.2 0 1695.7 0 1696.2 0 1696.7 0 1697.2 0 1697.7 0 1698.2 0 1698.7 0 1699.2 0 1699.7 0 1700.2 0 1700.7 0 1701.2 0 1701.7 0 1702.2 0 1702.7 0 1703.2 0 1703.7 0 1704.2 0 1704.7 0 1705.2 0 1705.7 0 1706.2 0 1706.7 0 1707.2 0 1707.7 0 1708.2 0 1708.7 0 1709.2 0 1709.7 0 1710.2 0 1710.7 0 1711.2 0 1711.7 0 1712.2 0 1712.7 0 1713.2 0 1713.7 0 1714.2 0 1714.7 0 1715.2 0 1715.7 0 1716.2 0 1716.7 0 1717.2 0 1717.7 0 1718.2 0 1718.7 0 1719.2 0 1719.7 0 1720.2 0 1720.7 0 1721.2 0 1721.7 0 1722.2 0 1722.7 0 1723.2 0 1723.7 0 1724.2 0 1724.7 0 1725.2 0 1725.7 0 1726.2 0 1726.7 0 1727.2 0 1727.7 0 1728.2 0 1728.7 0 1729.2 0 1729.7 0 1730.2 0 1730.7 0 1731.2 0 1731.7 0 1732.2 0 1732.7 0 1733.2 0 1733.7 0 1734.2 0 1734.7 0 1735.2 0 1735.7 0 1736.2 0 1736.7 0 1737.2 0 1737.7 0 1738.2 0 1738.7 0 1739.2 0 1739.7 0 1740.2 0 1740.7 0 1741.2 0 1741.7 0 1742.2 0 1742.7 0 1743.2 0 1743.7 0 1744.2 0 1744.7 0 1745.2 0 1745.7 0 1746.2 0 1746.7 0 1747.2 0 1747.7 0 1748.2 0 1748.7 0 1749.2 0 1749.7 0 1750.2 0 1750.7 0 1751.2 0 1751.7 0 1752.2 0 1752.7 0 1753.2 0 1753.7 0 1754.2 0 1754.7 0 1755.2 0 1755.7 0 1756.2 0 1756.7 0 1757.2 0 1757.7 0 1758.2 0 1758.7 0 1759.2 0 1759.7 0 1760.2 0 1760.7 0 1761.2 0 1761.7 0 1762.2 0 1762.7 0 1763.2 0 1763.7 0 1764.2 0 1764.7 0 1765.2 0 1765.7 0 1766.2 0 1766.7 0 1767.2 0 1767.7 0 1768.2 0 1768.7 0 1769.2 0 1769.7 0 1770.2 0 1770.7 0 1771.2 0 1771.7 0 1772.2 0 1772.7 0 1773.2 0 1773.7 0 1774.2 0 1774.7 0 1775.2 0 1775.7 0 1776.2 0 1776.7 0 1777.2 0 1777.7 0 1778.2 0 1778.7 0 1779.2 0 1779.7 0 1780.2 0 1780.7 0 1781.2 0 1781.7 0 1782.2 0 1782.7 0 1783.2 0 1783.7 0 1784.2 0 1784.7 0 1785.2 0 1785.7 0 1786.2 0 1786.7 0 1787.2 0 1787.7 0 1788.2 0 1788.7 0 1789.2 0 1789.7 0 1790.2 0 1790.7 0 1791.2 0 1791.7 0 1792.2 0 1792.7 0 1793.2 0 1793.7 0 1794.2 0 1794.7 0 1795.2 0 1795.7 0 1796.2 0 1796.7 0 1797.2 0 1797.7 0 1798.2 0 1798.7 0 1799.2 0 1799.7 0 1800.2 0 1800.7 0 1801.2 0 1801.7 0 1802.2 0 1802.7 0 1803.2 0 1803.7 0 1804.2 0 1804.7 0 1805.2 0 1805.7 0 1806.2 0 1806.7 0 1807.2 0 1807.7 0 1808.2 0 1808.7 0 1809.2 0 1809.7 0 1810.2 0 1810.7 0 1811.2 0 1811.7 0 1812.2 0 1812.7 0 1813.2 0 1813.7 0 1814.2 0 1814.7 0 1815.2 0 1815.7 0 1816.2 0 1816.7 0 1817.2 0 1817.7 0 1818.2 0 1818.7 0 1819.2 0 1819.7 0 1820.2 0 1820.7 0 1821.2 0 1821.7 0 1822.2 0 1822.7 0 1823.2 0 1823.7 0 1824.2 0 1824.7 0 1825.2 0 1825.7 0 1826.2 0 1826.7 0 1827.2 0 1827.7 0 1828.2 0 1828.7 0 1829.2 0 1829.7 0 1830.2 0 1830.7 0 1831.2 0 1831.7 0 1832.2 0 1832.7 0 1833.2 0 1833.7 0 1834.2 0 1834.7 0 1835.2 0 1835.7 0 1836.2 0 1836.7 0 1837.2 0 1837.7 0 1838.2 0 1838.7 0 1839.2 0 1839.7 0 1840.2 0 1840.7 0 1841.2 0 1841.7 0 1842.2 0 1842.7 0 1843.2 0 1843.7 0 1844.2 0 1844.7 0 1845.2 0 1845.7 0 1846.2 0 1846.7 0 1847.2 0 1847.7 0 1848.2 0 1848.7 0 1849.2 0 1849.7 0 1850.2 0 1850.7 0 1851.2 0 1851.7 0 1852.2 0 1852.7 0 1853.2 0 1853.7 0 1854.2 0 1854.7 0 1855.2 0 1855.7 0 1856.2 0 1856.7 0 1857.2 0 1857.7 0 1858.2 0 1858.7 0 1859.2 0 1859.7 0 1860.2 0 1860.7 0 1861.2 0 1861.7 0 1862.2 0 1862.7 0 1863.2 0 1863.7 0 1864.2 0 1864.7 0 1865.2 0 1865.7 0 1866.2 0 1866.7 0 1867.2 0 1867.7 0 1868.2 0 1868.7 0 1869.2 0 1869.7 0 1870.2 0 1870.7 0 1871.2 0 1871.7 0 1872.2 0 1Data truncated for brevity. Fill color is #4A5568.
-                    </svg>
+                    <!-- Hotspots (Points cliquables) -->
+                    <!-- NOUVELLES COORDONNÉES CALCULÉES POUR 'world-map.png' -->
 
-                    <!-- Hotspot: USA -->
-                    <a href="#details-usa" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 35%; left: 25%;" aria-label="Details for USA">
-                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    <!-- 1. USA (approx.) -->
+                    <a href="#details-usa" class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 33%; left: 25%;">
+                        <span class="block w-4 h-4 bg-indigo-400 rounded-full border-2 border-white"></span>
+                        <span class="absolute w-4 h-4 bg-indigo-400 rounded-full animate-ping"></span>
                     </a>
                     
-                    <!-- Hotspot: Germany -->
-                    <a href="#details-germany" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 30%; left: 48%;" aria-label="Details for Germany">
-                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    <!-- 2. Allemagne (approx.) -->
+                    <a href="#details-germany" class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 28%; left: 48%;">
+                        <span class="block w-4 h-4 bg-indigo-400 rounded-full border-2 border-white"></span>
+                        <span class="absolute w-4 h-4 bg-indigo-400 rounded-full animate-ping"></span>
                     </a>
 
-                    <!-- Hotspot: Japan -->
-                    <a href="#details-japan" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 36%; left: 80%;" aria-label="Details for Japan">
-                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    <!-- 3. Japon (approx.) -->
+                    <a href="#details-japan" class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 35%; left: 81%;">
+                        <span class="block w-4 h-4 bg-indigo-400 rounded-full border-2 border-white"></span>
+                        <span class="absolute w-4 h-4 bg-indigo-400 rounded-full animate-ping"></span>
                     </a>
 
-                    <!-- Hotspot: Madagascar -->
-                    <a href="#details-madagascar" class="absolute w-5 h-5 bg-indigo-500 rounded-full shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-transform hover:scale-125" style="top: 68%; left: 57%;" aria-label="Details for Madagascar">
-                        <span class="absolute inset-0 w-full h-full bg-indigo-400 rounded-full animate-pulse opacity-75"></span>
+                    <!-- 4. Madagascar (approx.) -->
+                    <a href="#details-madagascar" class="absolute transform -translate-x-1/2 -translate-y-1/2" style="top: 66%; left: 59%;">
+                        <span class="block w-4 h-4 bg-indigo-400 rounded-full border-2 border-white"></span>
+                        <span class="absolute w-4 h-4 bg-indigo-400 rounded-full animate-ping"></span>
                     </a>
                 </div>
-            </div>
 
-            <!-- 2. Les Sections de Contenu (une pour chaque pays) -->
-            <div class="max-w-5xl mx-auto px-6 space-y-12">
-                <!-- Section USA -->
-                <div id="details-usa" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
-                    <h3 class="text-3xl font-bold text-white mb-4">United States</h3>
-                    <p class="text-lg text-gray-300 mb-6">
-                        (Contenu pour les États-Unis... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
-                    </p>
-                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
-                </div>
+                <!-- Sections de Détails pour chaque pays -->
+                <div class="space-y-16">
+                    
+                    <!-- Détails USA -->
+                    <div id="details-usa" class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl scroll-mt-24">
+                        <h3 class="text-3xl font-bold text-white mb-6">United States</h3>
+                        <p class="text-lg text-gray-300">
+                            (Content for the United States... Describe the project, the experience, the university, or the company. Add photos or key learnings here.)
+                        </p>
+                    </div>
 
-                <!-- Section Germany -->
-                <div id="details-germany" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
-                    <h3 class="text-3xl font-bold text-white mb-4">Germany</h3>
-                    <p class="text-lg text-gray-300 mb-6">
-                        (Contenu pour l'Allemagne... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
-                    </p>
-                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
-                </div>
+                    <!-- Détails Allemagne -->
+                    <div id="details-germany" class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl scroll-mt-24">
+                        <h3 class="text-3xl font-bold text-white mb-6">Germany</h3>
+                        <p class="text-lg text-gray-300">
+                            (Content for Germany... Describe the project, the experience, the university, or the company. Add photos or key learnings here.)
+                        </p>
+                    </div>
 
-                <!-- Section Japan -->
-                <div id="details-japan" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
-                    <h3 class="text-3xl font-bold text-white mb-4">Japan</h3>
-                    <p class="text-lg text-gray-300 mb-6">
-                        (Contenu pour le Japon... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
-                    </p>
-                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
-                </div>
+                    <!-- Détails Japon -->
+                    <div id="details-japan" class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl scroll-mt-24">
+                        <h3 class="text-3xl font-bold text-white mb-6">Japan</h3>
+                        <p class="text-lg text-gray-300">
+                            (Content for Japan... Describe the project, the experience, the university, or the company. Add photos or key learnings here.)
+                        </Détails>
+                    </div>
 
-                <!-- Section Madagascar -->
-                <div id="details-madagascar" class="bg-gray-800/50 p-8 rounded-lg shadow-xl scroll-mt-24">
-                    <h3 class="text-3xl font-bold text-white mb-4">Madagascar</h3>
-                    <p class="text-lg text-gray-300 mb-6">
-                        (Contenu pour Madagascar... Parle de ton expérience, stage, projet, ou intérêt pour ce pays. Ajoute des photos si tu en as !)
-                    </p>
-                    <a href="#map-top" class="text-indigo-400 hover:text-indigo-300 transition-colors">↑ Back to map</a>
+                    <!-- Détails Madagascar -->
+                    <div id="details-madagascar" class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl scroll-mt-24">
+                        <h3 class="text-3xl font-bold text-white mb-6">Madagascar</h3>
+                        <p class="text-lg text-gray-300">
+                            (Content for Madagascar... Describe the project, the experience, the university, or the company. Add photos or key learnings here.)
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: Sustainability (Cachée) -->
-        <section id="sustainability" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Sustainability & Civic Engagement
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
-                <p class="text-lg text-gray-300">
-                    (Here, we will add content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
-                </p>
+        
+        <!-- SECTION SUSTAINABILITY (Cachée par défaut) -->
+        <section id="sustainability" class="page-section hidden w-full py-12 md:py-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    Sustainability & Civic Engagement
+                </h2>
+                <div class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl">
+                    <p class="text-lg text-gray-300">
+                        (Content for Sustainability & Civic Engagement... You can talk about your values, projects, or associations.)
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION: Sport (Cachée) -->
-        <section id="sport" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Sport & other activities
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
-                <p class="text-lg text-gray-300">
-                    (Here, we will add content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
-                </p>
+        
+        <!-- SECTION SPORT (Cachée par défaut) -->
+        <section id="sport" class="page-section hidden w-full py-12 md:py-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    Sport & other activities
+                </h2>
+                <div class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl">
+                    <p class="text-lg text-gray-300">
+                        (Content for Sport & other activities... Your hobbies, passions, and what they bring to you.)
+                    </Détails>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION: Career Development (Cachée) -->
-        <section id="career" class="page-section hidden py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12">
-                Career Development
-            </h2>
-            <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
-                <p class="text-lg text-gray-300">
-                    (Here, we will add content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </p>
+        
+        <!-- SECTION CAREER (Cachée par défaut) -->
+        <section id="career" class="page-section hidden w-full py-12 md:py-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    Career Development
+                </h2>
+                <div class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl">
+                    <p class="text-lg text-gray-300">
+                        (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
+                    </p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Pied de page -->
+    
+    <!-- Pied de Page -->
     <footer class="bg-gray-900 border-t border-gray-700 mt-20">
         <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Script de navigation -->
+    
+    <!-- Script de Navigation -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             
@@ -432,7 +437,6 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const pageSections = document.querySelectorAll('.page-section');
 
-            // Ouvre/ferme le menu mobile
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
@@ -450,21 +454,19 @@
                     targetPage.classList.remove('hidden');
                 }
             }
-            
-            // Fonction utilitaire pour mettre à jour le lien actif
-            function updateActiveLink(targetId) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-                document.querySelectorAll(`a[href="#${targetId}"]`).forEach(activeLink => {
-                    activeLink.classList.add('active');
-                });
-            }
 
             // --- Gestion des clics sur les liens de navigation ---
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    e.preventDefault(); // Empêche le comportement de lien par défaut
+                    
+                    const isAnchorLink = link.getAttribute('href').includes('#details-');
+                    
+                    if (isAnchorLink) {
+                        // C'est un lien d'ancre (ex: #details-usa), on laisse le navigateur faire
+                        return;
+                    }
+
+                    e.preventDefault(); // Empêche le comportement de lien par défaut UNIQUEMENT pour la nav principale
                     
                     const targetId = link.getAttribute('href').substring(1); // Obtient l'ID (ex: "accueil")
                     
@@ -472,7 +474,20 @@
                     showPage(targetId);
 
                     // Mettre à jour la classe 'active'
-                    updateActiveLink(targetId);
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    link.classList.add('active');
+
+                    // Pour le menu mobile, on cherche le lien parent et on l'active aussi
+                    if (link.closest('#mobile-menu')) {
+                        const desktopLink = document.querySelector(`header ul a[href="${link.getAttribute('href')}"]`);
+                        if(desktopLink) desktopLink.classList.add('active');
+                    } else {
+                        const mobileLink = document.querySelector(`#mobile-menu a[href="${link.getAttribute('href')}"]`);
+                        if(mobileLink) mobileLink.classList.add('active');
+                    }
+
 
                     // Fermer le menu mobile après le clic
                     if (!mobileMenu.classList.contains('hidden')) {
@@ -481,91 +496,48 @@
 
                     // Optionnel: change l'URL dans la barre sans recharger
                     history.pushState(null, null, `#${targetId}`);
-                    // Remonte en haut de la page pour la nouvelle section
-                    window.scrollTo(0, 0); 
+                    window.scrollTo(0, 0); // Remonte en haut de page
                 });
             });
-            
-            // --- Gérer les clics sur les liens d'ancre internes (la carte) ---
-            const anchorLinks = document.querySelectorAll('a[href^="#"]:not(.nav-link)');
-            anchorLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        // Fait défiler jusqu'à l'élément
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start' 
-                        });
-                        
-                        // Met à jour l'URL sans déclencher le script de navigation principal
-                        // On garde le hash de la page principale (#mobility) et on ajoute l'ancre
-                        history.pushState(null, null, `#${window.location.hash.substring(1).split('&')[0]}${targetId}`);
-                    }
-                });
-            });
-
 
             // --- Gérer l'état initial au chargement de la page (ex: si URL contient un hash) ---
-            let initialHash = window.location.hash.substring(1);
-            let pageId = 'accueil'; // Page par défaut
-            let internalAnchorId = null;
-
-            if (initialHash) {
-                // Vérifier si le hash est une ancre interne (ex: #details-usa)
-                const internalAnchors = ['details-usa', 'details-germany', 'details-japan', 'details-madagascar', 'map-top'];
-                if (internalAnchors.includes(initialHash)) {
-                    pageId = 'mobility'; // Si c'est une ancre interne, la page parente est 'mobility'
-                    internalAnchorId = initialHash;
-                } else if (document.getElementById(initialHash)) {
-                    // C'est un lien de page principal (ex: #engineering)
-                    pageId = initialHash;
-                }
-                // Si le hash n'est rien de tout ça, on garde 'accueil'
-            }
-
-            // Afficher la page déterminée
-            showPage(pageId);
-            updateActiveLink(pageId);
-
-            // Si une ancre interne a été spécifiée, défiler jusqu'à elle
-            if (internalAnchorId) {
-                setTimeout(() => {
-                    const targetElement = document.getElementById(internalAnchorId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            let initialPage = window.location.hash.substring(1);
+            if (initialPage && !initialPage.startsWith('details-') && document.getElementById(initialPage)) {
+                showPage(initialPage);
+                // Mettre à jour l'état 'active' du lien correspondant
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === `#${initialPage}`) {
+                        link.classList.add('active');
                     }
-                }, 100); // Léger délai pour s'assurer que la section est visible
+                });
+            } else {
+                // Si aucun hash, hash invalide, ou hash d'ancre, afficher la page d'accueil par défaut
+                showPage('accueil');
+                document.querySelectorAll('a[href="#accueil"]').forEach(l => l.classList.add('active'));
             }
 
             // Gérer les boutons Précédent/Suivant du navigateur
             window.addEventListener('popstate', () => {
-                let hash = window.location.hash.substring(1) || 'accueil';
-                let newPageId = 'accueil';
-                let newAnchorId = null;
-
-                const internalAnchors = ['details-usa', 'details-germany', 'details-japan', 'details-madagascar', 'map-top'];
-                
-                if (internalAnchors.includes(hash)) {
-                    newPageId = 'mobility';
-                    newAnchorId = hash;
-                } else if (document.getElementById(hash)) {
-                    newPageId = hash;
-                }
-                
-                showPage(newPageId);
-                updateActiveLink(newPageId);
-
-                if (newAnchorId) {
-                    setTimeout(() => {
-                        const targetElement = document.getElementById(newAnchorId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' }); // 'auto' pour un retour instantané
+                let pageId = window.location.hash.substring(1) || 'accueil';
+                if (pageId.startsWith('details-')) {
+                    // Si c'est un lien d'ancre, on doit être sur la page "mobility"
+                    showPage('mobility');
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#mobility') {
+                            link.classList.add('active');
                         }
-                    }, 0);
+                    });
+                } else {
+                    // C'est un changement de page normal
+                    showPage(pageId);
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if(link.getAttribute('href') === `#${pageId}`) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
         });
