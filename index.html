@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathurin Viot - E-Portfolio</title>
-    <!-- Chargement de Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Utilisation de la police "Inter" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Chargement de Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Utilisation de la police "Inter" --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
@@ -39,18 +37,11 @@
 </head>
 <body class="text-gray-200">
 
-    <!-- =========== HEADER / NAVBAR =========== -->
-    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        <!-- Conteneur élargi pour la barre de navigation -->
-        <!-- CHANGÉ: justify-center -> justify-evenly pour espacer les liens -->
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
+    <!-- =========== HEADER / NAVBAR =========== --><header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
+        <!-- Conteneur élargi pour la barre de navigation --><nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
             
-            <!-- Liens de navigation (Desktop) -->
-            <!-- CHANGÉ: Ajout de w-full et justify-evenly pour étirer les liens -->
-            <ul class="hidden md:flex w-full justify-evenly">
-                <!-- Le lien "Home" pointe vers #accueil -->
-                <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> <!-- Par défaut 'active' -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <!-- Liens de navigation (Desktop) --><ul class="hidden md:flex w-full justify-evenly">
+                <!-- Le lien "Home" pointe vers #accueil --><li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> <!-- Par défaut 'active' --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
@@ -66,8 +57,7 @@
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- CHANGÉ: Icône de ballon de basket -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9C7.4 2.4 10.6 1 14.1 1.1"/><path d="M19.1 19.1C16.6 21.6 13.4 23 9.9 22.9"/><path d="M9.9 1.1C13.4 1 16.6 2.4 19.1 4.9"/><path d="M4.9 19.1C7.4 21.6 10.6 23 14.1 22.9"/><path d="M12 1a11 11 0 0 0 0 22"/><path d="M1 12a11 11 0 0 1 22 0"/></svg>
+                    <!-- CHANGÉ: Vrai icône de ballon de basket --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
@@ -76,17 +66,14 @@
                 </a></li>
             </ul>
 
-            <!-- Bouton Menu Mobile -->
-            <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
+            <!-- Bouton Menu Mobile --><button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </nav>
         
-        <!-- Menu Mobile (caché par défaut) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
+        <!-- Menu Mobile (caché par défaut) --><div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
             <ul class="flex flex-col items-center py-4 space-y-5">
-                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> <!-- Par défaut 'active' -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> <!-- Par défaut 'active' --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a></li>
                 <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
@@ -102,8 +89,7 @@
                     Sustainability & Civic Engagement
                 </a></li>
                 <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- CHANGÉ: Icône de ballon de basket -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9C7.4 2.4 10.6 1 14.1 1.1"/><path d="M19.1 19.1C16.6 21.6 13.4 23 9.9 22.9"/><path d="M9.9 1.1C13.4 1 16.6 2.4 19.1 4.9"/><path d="M4.9 19.1C7.4 21.6 10.6 23 14.1 22.9"/><path d="M12 1a11 11 0 0 0 0 22"/><path d="M1 12a11 11 0 0 1 22 0"/></svg>
+                    <!-- CHANGÉ: Vrai icône de ballon de basket --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
@@ -114,24 +100,18 @@
         </div>
     </header>
 
-    <!-- =========== CONTENU PRINCIPAL =========== -->
-    <main class="w-full"> 
+    <!-- =========== CONTENU PRINCIPAL =========== --><main class="w-full"> 
 
-        <!-- --- Section Accueil (Visible par défaut) --- -->
-        <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
-            <!-- Contenu de la page d'accueil (élargi) -->
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Colonne 1: Image -->
-                <div class="md:col-span-1 flex justify-center items-center">
+        <!-- --- Section Accueil (Visible par défaut) --- --><section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
+            <!-- Contenu de la page d'accueil (élargi) --><div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Colonne 1: Image --><div class="md:col-span-1 flex justify-center items-center">
                     <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-500/30">
-                        <img src="assets/ma-photo.jpg" 
+                        <img src="https://placehold.co/400x400/374151/E0E7FF?text=Mathurin+Viot" 
                              alt="Photo de Mathurin Viot" 
-                             class="w-full h-full object-cover">
-                    </div>
+                             class="w-full h-full object-cover object-top"> <!-- AJOUTÉ: object-top --></div>
                 </div>
                 
-                <!-- Colonne 2: Texte de présentation -->
-                <div class="md:col-span-1">
+                <!-- Colonne 2: Texte de présentation --><div class="md:col-span-1">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
                         Mathurin's e-portfolio
                     </h1>
@@ -152,17 +132,14 @@
                 </div>
             </div>
 
-            <!-- Section Contact (Maintenant en dessous et centrée) -->
-            <div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
+            <!-- Section Contact (Maintenant en dessous et centrée) --><div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
                 <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <!-- Remplace '#' par ton email -->
-                    <a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+                    <!-- Remplace '#' par ton email --><a href="mailto:ton.email@example.com" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         Email Me
                     </a>
-                    <!-- Remplace '#' par ton lien LinkedIn -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
+                    <!-- Remplace '#' par ton lien LinkedIn --><a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         LinkedIn
                     </a>
@@ -170,8 +147,7 @@
             </div>
         </section>
 
-        <!-- --- Section Engineering course (Cachée par défaut) --- -->
-        <section id="engineering" class="page-section hidden py-20">
+        <!-- --- Section Engineering course (Cachée par défaut) --- --><section id="engineering" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Engineering Course
             </h2>
@@ -182,8 +158,7 @@
             </div>
         </section>
 
-        <!-- --- Section International Mobility (Cachée par défaut) --- -->
-        <section id="mobility" class="page-section hidden py-20">
+        <!-- --- Section International Mobility (Cachée par défaut) --- --><section id="mobility" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 International Mobility
             </h2>
@@ -194,8 +169,7 @@
             </div>
         </section>
 
-        <!-- --- Section Sustainability (Cachée par défaut) --- -->
-        <section id="sustainability" class="page-section hidden py-20">
+        <!-- --- Section Sustainability (Cachée par défaut) --- --><section id="sustainability" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sustainability & Civic Engagement
             </h2>
@@ -206,8 +180,7 @@
             </div>
         </section>
 
-        <!-- --- Section Sport (Cachée par défaut) --- -->
-        <section id="sport" class="page-section hidden py-20">
+        <!-- --- Section Sport (Cachée par défaut) --- --><section id="sport" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Sport & other activities
             </h2>
@@ -218,31 +191,27 @@
             </div>
         </section>
 
-        <!-- --- Section Career (Cachée par défaut) --- -->
-        <section id="career" class="page-section hidden py-20">
+        <!-- --- Section Career (Cachée par défaut) --- --><section id="career" class="page-section hidden py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12">
                 Career Development
             </h2>
             <div class="bg-gray-800/50 p-8 rounded-lg shadow-xl max-w-4xl mx-auto px-6">
                 <p class="text-lg text-gray-300">
                     (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                </T>
+                </p>
             </div>
         </section>
 
     </main>
 
-    <!-- =========== FOOTER =========== -->
-    <footer class="bg-gray-900 border-t border-gray-700 mt-20">
+    <!-- =========== FOOTER =========== --><footer class="bg-gray-900 border-t border-gray-700 mt-20">
         <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500">
             <p>&copy; 2025 Mathurin Viot. All rights reserved.</p>
             <p class="mt-2">Built with ❤️, HTML, and Tailwind CSS.</p>
         </div>
     </footer>
 
-    <!-- =========== SCRIPTS JS =========== -->
-    
-    <script>
+    <!-- =========== SCRIPTS JS =========== --><script>
         document.addEventListener("DOMContentLoaded", function() {
             
             // --- Gestion du Menu Mobile ---
