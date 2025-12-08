@@ -4,302 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathurin Viot - E-Portfolio</title>
-    
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-    <style>
-        /* Appliquer la police Inter par défaut */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0B0F1A; /* Un fond bleu nuit très sombre */
-            /* Ajout d'un motif de fond subtil */
-            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
-            background-size: 20px 20px;
-        }
-
-        /* Style pour la page active (surlignage) */
-        .page-section {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Style pour les liens de navigation */
-        .nav-link.active {
-            color: #818cf8; /* Couleur indigo-400 */
-        }
-    </style>
-</head>
-<body class="text-gray-200">
-
-    
-    <!-- En-tête et Navigation -->
-    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 left-0 right-0 z-50 shadow-lg">
-        
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-center items-center">
-            
-            <!-- Navigation Bureau -->
-            <ul class="hidden md:flex w-full justify-evenly">
-                
-                <li><a href="#accueil" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5 active"> 
-                    <!-- SVG pour Home -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
-                </a></li>
-                <li><a href="#engineering" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG pour Engineering -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
-                    Engineering course
-                </a></li>
-                <li><a href="#mobility" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG pour Mobility (Avion) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-                    International Mobility
-                </a></li>
-                <li><a href="#sustainability" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG pour Sustainability -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
-                    Sustainability & Civic Engagement
-                </a></li>
-                <li><a href="#sport" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG pour Sport (Ballon de basket) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
-                    Sport & other activities
-                </a></li>
-                <li><a href="#career" class="nav-link text-sm font-medium hover:text-indigo-400 transition-colors flex items-center gap-x-1.5">
-                    <!-- SVG pour Career -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                    Career Development
-                </a></li>
-            </ul>
-
-            <!-- Bouton Menu Mobile -->
-            <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-        </nav>
-        
-        <!-- Menu Mobile Déroulant -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
-            <ul class="flex flex-col items-center py-4 space-y-5">
-                <li><a href="#accueil" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2 active"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
-                </a></li>
-                <li><a href="#engineering" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.5 5.159a1 1 0 0 0-1.001 0L2.598 9.084a1 1 0 0 0-.018 1.838l9.403 3.917a1 1 0 0 0 .998 0l9.402-3.917z"/><path d="M3 10.5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6.5"/><path d="M22 10.5l-10-4-10 4"/><path d="M12 14.5v8"/></svg>
-                    Engineering course
-                </a></li>
-                <li><a href="#mobility" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-1-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3-1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-                    International Mobility
-                </a></li>
-                <li><a href="#sustainability" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M21.3 12.03c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1C2.7 7.5 2.7 4.5 7.2 4.5c1.1 0 2.2.3 3.2.8 1.1.5 2.1 1.2 3.2 1.2s2.1-.7 3.2-1.2c1-.5 2.1-.8 3.2-.8 4.5 0 4.5 3 0 7.53z"/><path d="M18.8 16.9c-1.2 1.2-2.8 2.3-4.5 3.1-1.6.8-3.4.8-5 0-1.7-.8-3.3-1.9-4.5-3.1"/><path d="M7.2 4.5C2.7 4.5 2.7 7.5 7.2 12c1.1 0 2.2-.3 3.2-.8C11.5 10.7 12.5 10 13.6 10s2.1.7 3.2 1.2c1 .5 2.1 .8 3.2 .8 4.5 0 4.5-3-0-7.5-1.1 0-2.2.3-3.2.8-.9.5-1.9 1.2-3 1.2s-2.2-.7-3.2-1.2C9.4 4.8 8.3 4.5 7.2 4.5z"/></svg>
-                    Sustainability & Civic Engagement
-                </a></li>
-                <li><a href="#sport" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <!-- SVG pour Sport (Ballon de basket) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="M8.5 2.5C9.4 6 12 11.5 12 12c0 1.5-2.5 6-3.5 9.5"/><path d="M15.5 2.5C14.6 6 12 11.5 12 12c0 1.5 2.5 6 3.5 9.5"/><path d="M2.5 8.5h19"/><path d="M2.5 15.5h19"/></svg>
-                    Sport & other activities
-                </a></li>
-                <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                    Career Development
-                </a></li>
-            </ul>
-        </div>
-    </header>
-
-    
-    <!-- Contenu Principal -->
-    <main class="w-full"> 
-
-        
-        <!-- SECTION ACCUEIL (Visible par défaut) -->
-        <section id="accueil" class="page-section flex flex-col justify-center items-center w-full py-12 md:py-20">
-            
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                
-                <!-- Colonne Image -->
-                <div class="md:col-span-1 flex justify-center items-center">
-                    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-indigo-500/30">
-                        <img src="assets/ma-photo.jpg" 
-                             alt="Photo de Mathurin Viot" 
-                             class="w-full h-full object-cover"> 
-                    </div>
-                </div>
-                
-                
-                <!-- Colonne Texte -->
-                <div class="md:col-span-1">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-                        Mathurin's e-portfolio
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold text-indigo-400 mb-6">
-                        Welcome on my e-portfolio!
-                    </h2>
-                    <div class="space-y-4 text-lg text-gray-300">
-                        <p>
-                            I am Mathurin VIOT, a student engineer at ENSEEIHT. I am currently in my second year at ENSEEIHT (equivalent to a Master’s 1) within the Energy, Electronics and Automation department, specializing in Energy/Mechatronics/Automation.
-                        </p>
-                        <p>
-                            I have a strong interest in robotics : whether in programming or dynamic structure modeling, as well as in industrial process automation (Industry 4.0, cobots).
-                        </p>
-                        <p>
-                            I am also drawn to the railway sector, particularly for its promising opportunities for innovation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <!-- Section Contact Me (sur la page d'accueil) -->
-            <div class="mt-16 md:mt-24 w-full max-w-7xl mx-auto px-6">
-                <h3 class="text-2xl font-semibold text-white mb-6 text-center">Contact Me</h3>
-                <div class="flex flex-wrap gap-4 justify-center">
-                    
-                    <!-- Bouton Email -->
-                    <a href="mailto:mathurin.viot@etu.toulouse-inp.fr" class="inline-flex items-center gap-2.5 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                        Email Me
-                    </a>
-                    
-                    <!-- Bouton LinkedIn -->
-                    <a href="https://www.linkedin.com/in/mathurin-viot-86830a32a/?locale=en_US" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-gray-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg hover:bg-gray-600 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- SECTION ENGINEERING (Cachée par défaut) -->
-        <section id="engineering" class="page-section hidden w-full py-12 md:py-20">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-white mb-12">
-                    Engineering Course
-                </h2>
-                
-                <!-- Présentation ENSEEIHT -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center bg-gray-900/50 rounded-lg shadow-xl p-8 md:p-12 mb-16">
-                    <div class="md:col-span-1 flex justify-center items-center">
-                        <img src="assets/logo-N7.png" alt="Logo ENSEEIHT" class="w-48 h-auto bg-white p-4 rounded-lg shadow-md">
-                    </div>
-                    <div class="md:col-span-2">
-                        <h3 class="text-3xl font-bold text-white mb-4">Toulouse INP - ENSEEIHT (N7)</h3>
-                        <p class="text-lg text-gray-300 mb-4">
-                            Founded in 1907, ENSEEIHT (or "N7") is a top-tier French engineering school within the Toulouse INP, located in the heart of Toulouse.
-                        </p>
-                        <p class="text-lg text-gray-300">
-                            Its core mission is to train engineers to meet the grand challenges of the digital revolution and the energy transition.
-                        </p>
-                    </div>
-                    <div class="md:col-span-3 rounded-lg overflow-hidden shadow-lg mt-4">
-                        <img src="assets/photo-n7.jpg" alt="ENSEEIHT Building" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-
-                <!-- Mon Parcours -->
-                <h3 class="text-3xl font-bold text-white text-center mb-10">My Path: Energy, Electronics & Automation</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <!-- Colonne 1: Mon département -->
-                    <div class="bg-gray-800/50 p-8 rounded-lg shadow-lg">
-                        <h4 class="text-2xl font-semibold text-indigo-400 mb-4">My Department: 3EA</h4>
-                        <p class="text-lg text-gray-300">
-                            I am currently a second-year student (M1 equivalent) in the "Energy, Electronics, and Automation" (3EA) department. My specialization is in **Energy**, where I study the principles of electrical energy production, conversion, and management.
-                        </p>
-                    </div>
-                    <!-- Colonne 2: Mon objectif -->
-                    <div class="bg-gray-800/50 p-8 rounded-lg shadow-lg">
-                        <h4 class="text-2xl font-semibold text-indigo-400 mb-4">My Goal: The ACISE Track</h4>
-                        <p class="text-lg text-gray-300">
-                            My objective is to join the **ACISE** (Architecture de Commande et Informatique des Systèmes Embarqués) track for my S8 and S9 semesters. This specialization is at the intersection of real-time control, embedded systems, and industrial automation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Focus ACISE -->
-                <div class="bg-gray-900/50 rounded-lg shadow-xl p-8 md:p-12">
-                    <h3 class="text-3xl font-bold text-white text-center mb-10">Focus: ACISE Specialization</h3>
-                    
-                    <!-- Compétences Clés -->
-                    <h4 class="text-2xl font-semibold text-white mb-6 text-center">Core Competencies</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                        <!-- Compétence 1 -->
-                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                            <h5 class="text-xl font-bold text-white mb-2">Real-Time Automation</h5>
-                            <p class="text-gray-300">Analysis of complex systems, software/hardware modeling, and real-time control algorithms.</p>
-                        </div>
-                        <!-- Compétence 2 -->
-                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="9" x2="9" y1="9" y2="9.01"></line><line x1="15" x2="15" y1="9" y2="9.01"></line><line x1="9" x2="9" y1="15" y2="15.01"></line><line x1="15"x2="15" y1="15" y2="15.01"></line></svg>
-                            <h5 class="text-xl font-bold text-white mb-2">Embedded & Critical Systems</h5>
-                            <p class="text-gray-300">Design of algorithms for decision-making, piloting, and ensuring functional safety and security.</p>
-                        </div>
-                        <!-- Compétence 3 -->
-                        <div class="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-indigo-400 mb-4"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M22 14h-2"></path><path d="M14 2v2"></path><path d="M14 20v-2"></path></svg>
-                            <h5 class="text-xl font-bold text-white mb-2">System Mastery</h5>
-                            <p class="text-gray-300">Control of continuous-state (robots, machines) and discrete-event (energy management) systems.</p>
-                        </div>
-                    </div>
-
-                    <!-- Domaines d'Application -->
-                    <h4 class="text-2xl font-semibold text-white mb-6 text-center">Key Application Domains</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Domaine 1 -->
-                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
-                            <img src="https://placehold.co/600x400/312e81/ffffff?text=Smart+Grid" alt="Smart Grids" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
-                                <h5 class="text-2xl font-extrabold text-white">Smart Grids & Energy Transition</h5>
-                            </div>
-                        </div>
-                        <!-- Domaine 2 -->
-                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
-                            <img src="https://placehold.co/600x400/15803d/ffffff?text=Robotics" alt="Robotics" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
-                                <h5 class="text-2xl font-extrabold text-white">Robotics & New Mobilities</h5>
-                            </div>
-                        </div>
-                        <!-- Domaine 3 -->
-                        <div class="relative rounded-lg overflow-hidden shadow-xl h-48">
-                            <img src="https://placehold.co/600x400/b91c1c/ffffff?text=Embedded" alt="Embedded Systems" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-6">
-                                <h5 class="text-2xl font-extrabold text-white">Embedded & Critical Systems</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- SECTION MOBILITY (Cachée par défaut) -->
-        <section id="mobility" class="page-section hidden w-full py-12 md:py-20">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-white mb-6">
-                    International Mobility
-                </h2>
-                <p class="text-lg text-indigo-300 text-center mb-12 max-w-2xl mx-auto">
-                    Click on a highlighted country to discover my experiences and projects.
-                </pre>
-                
-                <!-- Carte du Monde Interactive -->
-                <!-- Utilise un 'padding-bottom' pour forcer un ratio d'aspect -->
-                <div class="relative w-full max-w-5xl mx-auto mb-16" style="padding-bottom: 50%;"> <!-- Ratio 2:1, ajuste si besoin -->
-                    <!-- L'image de la carte -->
+    <!-- Contenu principal chargé dynamiquement -->
+    <main id="main-content" class="w-full"></main>
                     <img src="assets/world-map.png" 
                          alt="World Map" 
                          class="absolute top-0 left-0 w-full h-full object-contain rounded-lg shadow-2xl">
@@ -427,119 +133,83 @@
     </footer>
 
     
-    <!-- Script de Navigation -->
+    <!-- Script de navigation (chargement dynamique des pages dans pages/*.html) -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            
-            // --- Gestion du Menu Mobile ---
+        document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelectorAll('.nav-link');
-            const pageSections = document.querySelectorAll('.page-section');
+            const main = document.getElementById('main-content');
 
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-            // --- Gestion de la Navigation (Afficher/Cacher les pages) ---
-            function showPage(targetId) {
-                // Masquer toutes les sections
-                pageSections.forEach(section => {
-                    section.classList.add('hidden');
-                });
+            async function loadPage(pageId) {
+                const url = `pages/${pageId}.html`;
+                try {
+                    const res = await fetch(url);
+                    if (!res.ok) throw new Error('Not found');
+                    const html = await res.text();
+                    main.innerHTML = html;
+                    // update active links
+                    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${pageId}`));
+                } catch (e) {
+                    main.innerHTML = `<div class="max-w-4xl mx-auto p-8"><h2 class="text-2xl text-white">Page introuvable</h2></div>`;
+                }
 
-                // Afficher la section cible
-                const targetPage = document.getElementById(targetId);
-                if (targetPage) {
-                    targetPage.classList.remove('hidden');
+                // if hash is details-*, scroll to anchor inside loaded content
+                const currentHash = window.location.hash.substring(1);
+                if (currentHash && currentHash.startsWith('details-')) {
+                    const el = document.getElementById(currentHash);
+                    if (el) el.scrollIntoView();
+                } else {
+                    window.scrollTo(0, 0);
                 }
             }
 
-            // --- Gestion des clics sur les liens de navigation ---
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    
-                    const isAnchorLink = link.getAttribute('href').includes('#details-');
-                    
-                    if (isAnchorLink) {
-                        // C'est un lien d'ancre (ex: #details-usa), on laisse le navigateur faire
-                        return;
-                    }
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+                    const id = href.substring(1);
 
-                    e.preventDefault(); // Empêche le comportement de lien par défaut UNIQUEMENT pour la nav principale
-                    
-                    const targetId = link.getAttribute('href').substring(1); // Obtient l'ID (ex: "accueil")
-                    
-                    // Gérer l'affichage de la page
-                    showPage(targetId);
-
-                    // Mettre à jour la classe 'active'
-                    navLinks.forEach(navLink => {
-                        navLink.classList.remove('active');
-                    });
-                    link.classList.add('active');
-
-                    // Pour le menu mobile, on cherche le lien parent et on l'active aussi
-                    if (link.closest('#mobile-menu')) {
-                        const desktopLink = document.querySelector(`header ul a[href="${link.getAttribute('href')}"]`);
-                        if(desktopLink) desktopLink.classList.add('active');
+                    if (id.startsWith('details-')) {
+                        // go to mobility page then scroll to anchor
+                        history.pushState(null, null, `#${id}`);
+                        loadPage('mobility').then(() => {
+                            const t = document.getElementById(id);
+                            if (t) t.scrollIntoView();
+                        });
                     } else {
-                        const mobileLink = document.querySelector(`#mobile-menu a[href="${link.getAttribute('href')}"]`);
-                        if(mobileLink) mobileLink.classList.add('active');
+                        history.pushState(null, null, `#${id}`);
+                        loadPage(id);
                     }
 
-
-                    // Fermer le menu mobile après le clic
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-
-                    // Optionnel: change l'URL dans la barre sans recharger
-                    history.pushState(null, null, `#${targetId}`);
-                    window.scrollTo(0, 0); // Remonte en haut de page
+                    if (!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
                 });
             });
 
-            // --- Gérer l'état initial au chargement de la page (ex: si URL contient un hash) ---
-            let initialPage = window.location.hash.substring(1);
-            if (initialPage && !initialPage.startsWith('details-') && document.getElementById(initialPage)) {
-                showPage(initialPage);
-                // Mettre à jour l'état 'active' du lien correspondant
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                    if(link.getAttribute('href') === `#${initialPage}`) {
-                        link.classList.add('active');
-                    }
-                });
-            } else {
-                // Si aucun hash, hash invalide, ou hash d'ancre, afficher la page d'accueil par défaut
-                showPage('accueil');
-                document.querySelectorAll('a[href="#accueil"]').forEach(l => l.classList.add('active'));
-            }
-
-            // Gérer les boutons Précédent/Suivant du navigateur
             window.addEventListener('popstate', () => {
                 let pageId = window.location.hash.substring(1) || 'accueil';
                 if (pageId.startsWith('details-')) {
-                    // Si c'est un lien d'ancre, on doit être sur la page "mobility"
-                    showPage('mobility');
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#mobility') {
-                            link.classList.add('active');
-                        }
+                    loadPage('mobility').then(() => {
+                        const t = document.getElementById(pageId);
+                        if (t) t.scrollIntoView();
                     });
                 } else {
-                    // C'est un changement de page normal
-                    showPage(pageId);
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                        if(link.getAttribute('href') === `#${pageId}`) {
-                            link.classList.add('active');
-                        }
-                    });
+                    loadPage(pageId);
                 }
             });
+
+            // initial load
+            let initial = window.location.hash.substring(1) || 'accueil';
+            if (initial.startsWith('details-')) {
+                loadPage('mobility').then(() => {
+                    const t = document.getElementById(initial);
+                    if (t) t.scrollIntoView();
+                });
+            } else {
+                loadPage(initial);
+            }
         });
     </script>
 </body>
