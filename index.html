@@ -37,6 +37,11 @@
         .nav-link.active {
             color: #818cf8; /* Couleur indigo-400 */
         }
+
+        /* Utilitaires pour la vidéo responsive */
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -113,7 +118,7 @@
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
             </ul>
@@ -149,7 +154,7 @@
                     Sport & other activities
                 </a></li>
                 <li><a href="#career" class="nav-link font-medium hover:text-indigo-400 transition-colors text-lg flex items-center gap-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     Career Development
                 </a></li>
             </ul>
@@ -659,15 +664,97 @@
         
         <!-- SECTION CAREER (Cachée par défaut) -->
         <section id="career" class="page-section hidden w-full py-12 md:py-20">
-            <div class="max-w-4xl mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-white mb-12">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-16">
                     Career Development
                 </h2>
-                <div class="bg-gray-900/50 p-8 md:p-12 rounded-lg shadow-xl">
-                    <p class="text-lg text-gray-300">
-                        (Content for Career Development... Your professional project, your target sectors, links to your CV and LinkedIn.)
-                    </p>
+
+                <!-- Vision & Video Container -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                    
+                    <!-- Vision / Professional Project -->
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold text-indigo-400">Engineering the Future of Industry</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            My professional goal is to become an engineer specializing in <strong>robotics and automation</strong>. 
+                            I have a keen interest in dynamic structure modeling and <strong>Industry 4.0</strong>, particularly the integration of "cobots" in industrial processes.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            I am also deeply invested in the <strong>railway sector</strong>, where automation and intelligent energy management play an increasingly crucial role in sustainable mobility.
+                        </p>
+                        
+                        <!-- Target Sectors Tags -->
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <span class="px-4 py-2 bg-indigo-900/50 border border-indigo-500/30 rounded-full text-indigo-300 text-sm font-semibold">Robotics</span>
+                            <span class="px-4 py-2 bg-indigo-900/50 border border-indigo-500/30 rounded-full text-indigo-300 text-sm font-semibold">Automation</span>
+                            <span class="px-4 py-2 bg-indigo-900/50 border border-indigo-500/30 rounded-full text-indigo-300 text-sm font-semibold">Industry 4.0</span>
+                            <span class="px-4 py-2 bg-indigo-900/50 border border-indigo-500/30 rounded-full text-indigo-300 text-sm font-semibold">Railway Innovation</span>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Video -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+                            <!-- 16:9 Aspect Ratio -->
+                            <div class="aspect-video w-full">
+                                <iframe 
+                                    class="w-full h-full"
+                                    src="https://www.youtube.com/embed/N6rghP4L3V8" 
+                                    title="Engineers interview about international mobility" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="p-4 bg-gray-800/80 backdrop-blur-sm">
+                                <p class="text-white font-medium flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
+                                    International Mobility Interview
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Downloads Section (CVs) -->
+                <div class="bg-gray-800/30 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+                    <!-- Background Decoration -->
+                    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold text-white mb-6">Resume & Qualifications</h3>
+                        <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                            To learn more about my academic background, professional experiences, and technical skills, please feel free to download my resume.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-6">
+                            <!-- French CV (Primary) -->
+                            <a href="assets/CV_Viot_Fr.pdf" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-indigo-600 font-lg rounded-xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-lg shadow-indigo-500/30">
+                                <span class="mr-3">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                </span>
+                                Download CV (Français)
+                                <div class="absolute -top-3 -right-3">
+                                    <span class="relative flex h-3 w-3">
+                                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                      <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+                                    </span>
+                                </div>
+                            </a>
+
+                            <!-- English CV (Secondary) -->
+                            <a href="assets/CV_Viot_Eng.pdf" target="_blank" class="group inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-gray-800 font-lg rounded-xl hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 border border-gray-600 hover:border-gray-500">
+                                <span class="mr-3">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                </span>
+                                Download CV (English)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
